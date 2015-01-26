@@ -1,0 +1,111 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+/* Add Styles Here */
+body { font-family:Times; font-size: 1em; }
+section #content { margin:0 auto; width:960px; padding:20px 0px; }
+
+h1 { font-family: Homemade Apple; font-size:3.25em; font-weight:bold; color:black; text-align:center; }
+h2 { font-family: Homemade Apple; font-size:2.25em; font-weight:bold; color:black; text-align:center; line-height:2.25em; }
+p { padding-bottom:10px; padding-top:30px; text-align:center; color:#6b6b7d; }
+img { max-width:50%; align: center;}
+img.center {display: block; margin-left: auto; margin-right: auto;}
+
+
+
+
+
+@media screen and (max-width:9000px)
+ {
+	img{ max-width:500px; }
+ }
+
+
+@media screen and (max-width:1200px)
+ {
+   h1 {font-size:2.25em; }
+   h2 {font-size:1.5em; }
+   img{ max-width:55%; }
+  }
+
+
+
+@media screen and (max-width:800px) 
+ {
+   h1 {font-size:2.25em; }
+   h2 {font-size:1.5em; }
+   img{ max-width:60%; }
+  }
+
+
+@media screen and (max-width:650px)
+ {
+  h1 {font-size:2em; }
+  h2 {font-size:1.25em; }
+  img {max-height:75%;}
+ } 
+ 
+
+
+
+
+
+
+
+@media handheld and (max-width:650px)
+ {
+  h1 {font-size:2em; }
+  h2 {font-size:1.25em; }
+  img {max-height:75%;}
+ } 
