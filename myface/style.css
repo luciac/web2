@@ -54,17 +54,75 @@ table {
 
 /* Add Styles Here */
 body { font-family:Times; font-size: 1em; }
-section #content { margin:0 auto; width:960px; padding:20px 0px; }
+
+.photo {float:left; width:50%; padding-left:5%; padding-top:5%; }
+.babies {float:left; width:30%; background-color:white; margin:0; padding-top:20%; }
+
+
 
 h1 { font-family: Homemade Apple; font-size:3.25em; font-weight:bold; color:black; text-align:center; }
 h2 { font-family: Homemade Apple; font-size:2.25em; font-weight:bold; color:black; text-align:center; line-height:2.25em; }
-p { padding-bottom:10px; padding-top:30px; text-align:center; color:#6b6b7d; }
-img { max-width:50%; align: center;}
+p { text-align:center; }
+a { font-family:georgia; font-size: 1em; padding-bottom:10px; padding-top:30px; text-align:center; color:#6b6b7d; text-decoration:none; }
+a:hover { color:#666699; font-style:italic; font-size:.98em; }
+
+
+img { max-width:90%; }
+
+
+
+/*
 img.center {display: block; margin-left: auto; margin-right: auto;}
 
+@media screen and (max-width:920px)
+{
+	img { }
+	.babies {padding-top:20% }
+	h1 { font-size:2.5em; line-height:1em; }
+	h2 { font-size:1.5em; line-height:1.75em; }
+
+}
+*/
 
 
 
+@media screen and (max-width:900px)
+{
+	.photo { clear:both; width:80%; padding-left:0; }
+	.babies { clear:both; width:80%; padding-top:2%; padding-left:5%; }
+	h1 { font-size:2.5em; line-height:1em; text-align:left; }
+	h2 { font-size:1.5em; line-height:2em; text-align:left; }
+	p { text-align:left; line-height:2em; }
+}
+
+
+@media screen and (max-width:600px)
+{
+	.photo { clear:both; width:100%; }
+	img { max-width:110%; position:relative; left:-15%; }
+	.babies { clear:both; width:80%; padding-top:2%; padding-left:5%; }
+	h1 { font-size:2.5em; line-height:1em; text-align:left; }
+	h2 { font-size:1.5em; line-height:2em; text-align:left; }
+	p { text-align:left; line-height:2em; }
+}
+
+
+
+@media screen and (max-width:456px)
+{
+	.photo { clear:both; width:100%; }
+	img { max-width:120%; position:relative; left:-30%; }
+	.babies { clear:both; width:80%; padding-top:2%; padding-left:5%; }
+	h1 { font-size:2.5em; line-height:1em; text-align:left; }
+	h2 { font-size:1.5em; line-height:2em; text-align:left; }
+	p { text-align:left; line-height:2em; }
+}
+
+
+	
+	
+
+/*
 
 @media screen and (max-width:9000px)
  {
@@ -109,3 +167,4 @@ img.center {display: block; margin-left: auto; margin-right: auto;}
   h2 {font-size:1.25em; }
   img {max-height:75%;}
  } 
+*/
