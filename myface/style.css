@@ -124,7 +124,7 @@ img { max-width:90%; }
 
 
 
-@media handheld and (max-width:640px)
+@media handheld and (max-width:900px)
 {
 	.photo { clear:both; width:100%; }
 	img { max-width:110%; position:relative; left:-15%; }
