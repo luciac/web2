@@ -63,8 +63,8 @@ body { font-family:Times; font-size: 1em; }
 h1 { font-family: Homemade Apple; font-size:3.25em; font-weight:bold; color:black; text-align:center; }
 h2 { font-family: Homemade Apple; font-size:2.25em; font-weight:bold; color:black; text-align:center; line-height:2.25em; }
 p { text-align:center; }
-a { font-family:georgia; font-size: 1em; padding-bottom:10px; padding-top:30px; text-align:center; color:#6b6b7d; text-decoration:none; }
-a:hover { color:#666699; font-style:italic; font-size:.98em; }
+a { font-family:georgia; font-size: 1em; padding:5px; padding-left:12px; padding-right:12px; text-align:center; color:#6b6b7d; text-decoration:none; background-color:#F1F1F1; border-radius:6px; }
+a:hover { color:#666699; font-style:italic; font-size:.98em; padding:5.5px; padding-left:12.5px; padding-right:12.5px; }
 
 
 img { max-width:90%; }
