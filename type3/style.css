@@ -1,0 +1,137 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+/* Add Styles Here */
+body { font-family:Times; font-size: 1em; }
+
+.photo {float:left; width:50%; padding-left:5%; padding-top:5%; }
+.babies {float:left; width:40%; background-color:white; margin:0; padding-top:120px; }
+.chinchillas {clear:both; padding-left:8%; width:50%; }
+
+
+
+h1 { font-family: Helvetica; font-size:1.75em; font-weight:bold; color:black; text-align:right; line-height:1.2em; }
+h3 { font-family:georgia; font-size:.9em; text-align:right; padding-top:20px; padding-bottom:20px; }
+h2 { font-family: Homemade Apple; font-size:2.25em; font-weight:bold; color:black; text-align:center; line-height:2.25em; }
+p { text-align:left; font-family:georgia; padding-bottom:40px; line-height:1.2em; }
+article { padding-bottom:40px; }
+a { font-family:georgia; font-size: 1em; padding:5px; padding-left:12px; padding-right:12px; text-align:center; color:#6b6b7d; text-decoration:none; background-color:#F1F1F1; border-radius:6px; }
+a:hover { color:#666699; font-style:italic; font-size:.98em; padding:5.5px; padding-left:12.5px; padding-right:12.5px; }
+
+
+.photo img { max-width:90%; }
+.one { max-width:90%; }
+.two { max-width:90%; }
+.three { max-width:90%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:900px)
+{
+	.photo { clear:both; width:80%; padding-left:0; }
+	.babies { clear:both; width:80%; padding-top:2%; padding-left:5%; }
+	h1 { font-size:2.5em; line-height:1em; text-align:left; }
+	h2 { font-size:1.5em; line-height:2em; text-align:left; }
+	p { text-align:left; line-height:2em; }
+}
+
+
+@media handheld, screen and (max-width:640px)
+{
+	.photo { clear:both; width:100%; }
+	.babies { clear:both; width:80%; padding-top:2%; padding-left:5%; }
+	h1 { font-size:2.5em; line-height:1em; text-align:left; }
+	h2 { font-size:1.5em; line-height:2em; text-align:left; }
+	p { text-align:left; line-height:2em; }
+}
+
+
+
+@media handheld, screen and (max-width:456px)
+{
+	.photo { clear:both; width:100%; }
+	.babies { clear:both; width:80%; padding-top:2%; padding-left:5%; }
+	h1 { font-size:2.5em; line-height:1em; text-align:left; }
+	h2 { font-size:1.5em; line-height:2em; text-align:left; }
+	p { text-align:left; line-height:2em; }
+}
+
+
+
+
+
+
+
+
+
+@media handheld, screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait)
+{
+	.photo { clear:both; width:100%; }
+	img { max-width:120%; position:relative; left:-30%; }
+	.babies { clear:both; width:80%; padding-top:2%; padding-left:5%; }
+	h1 { font-size:2.5em; line-height:1em; text-align:left; }
+	h2 { font-size:1.5em; line-height:2em; text-align:left; }
+	p { text-align:left; line-height:2em; }
+}
