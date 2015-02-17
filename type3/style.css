@@ -62,7 +62,7 @@ body { font-family:Times; font-size: 1em; }
 
 
 h1 { font-family: Helvetica; font-size:1.75em; font-weight:bold; color:black; text-align:right; line-height:1.2em; }
-h3 { font-family:georgia; font-size:.9em; text-align:right; padding-top:20px; padding-bottom:20px; }
+h3 { font-family:georgia; font-size:.9em; text-align:right; padding-top:20px; padding-bottom:20px; font-style:italic; }
 h2 { font-family: Homemade Apple; font-size:2.25em; font-weight:bold; color:black; text-align:center; line-height:2.25em; }
 p { text-align:left; font-family:georgia; padding-bottom:40px; line-height:1.2em; }
 article { padding-bottom:40px; }
@@ -95,6 +95,7 @@ a:hover { color:#666699; font-style:italic; font-size:.98em; padding:5.5px; padd
 	h1 { font-size:2.5em; line-height:1em; text-align:left; }
 	h2 { font-size:1.5em; line-height:2em; text-align:left; }
 	p { text-align:left; line-height:2em; }
+	h3 { text-align:left; }
 }
 
 
@@ -105,6 +106,7 @@ a:hover { color:#666699; font-style:italic; font-size:.98em; padding:5.5px; padd
 	h1 { font-size:2.5em; line-height:1em; text-align:left; }
 	h2 { font-size:1.5em; line-height:2em; text-align:left; }
 	p { text-align:left; line-height:2em; }
+	h3 { text-align:left; }
 }
 
 
@@ -116,6 +118,7 @@ a:hover { color:#666699; font-style:italic; font-size:.98em; padding:5.5px; padd
 	h1 { font-size:2.5em; line-height:1em; text-align:left; }
 	h2 { font-size:1.5em; line-height:2em; text-align:left; }
 	p { text-align:left; line-height:2em; }
+	h3 { text-align:left; }
 }
 
 
@@ -133,4 +136,6 @@ a:hover { color:#666699; font-style:italic; font-size:.98em; padding:5.5px; padd
 	h1 { font-size:2.5em; line-height:1em; text-align:left; }
 	h2 { font-size:1.5em; line-height:2em; text-align:left; }
 	p { text-align:left; line-height:2em; }
+	h3 { text-align:left; }
+
 }
