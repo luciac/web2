@@ -58,6 +58,8 @@ body { font-family:Times; font-size: 1em; }
 .photo {float:left; width:50%; padding-left:5%; padding-top:5%; }
 .babies {float:left; width:40%; background-color:white; margin:0; padding-top:120px; }
 .chinchillas {clear:both; padding-left:8%; width:50%; }
+.photoo {float:left; width:50%; padding-left:5%; padding-top:5%; }
+
 
 
 
@@ -66,11 +68,12 @@ h3 { font-family:georgia; font-size:.9em; text-align:right; padding-top:20px; pa
 h2 { font-family: Homemade Apple; font-size:2.25em; font-weight:bold; color:black; text-align:center; line-height:2.25em; }
 p { text-align:left; font-family:georgia; padding-bottom:40px; line-height:1.2em; }
 article { padding-bottom:40px; }
-a { font-family:georgia; font-size: 1em; padding:5px; padding-left:12px; padding-right:12px; text-align:center; color:#6b6b7d; text-decoration:none; background-color:#F1F1F1; border-radius:6px; }
-a:hover { color:#666699; font-style:italic; font-size:.98em; padding:5.5px; padding-left:12.5px; padding-right:12.5px; }
+a { font-family:georgia; font-size: 1em; padding:5px; padding-left:12px; padding-right:12px; text-align:center; color:#F0F0F5; text-decoration:none; background-color:#F9F9F9; border-radius:6px; }
+a:hover { color:#E0E0EB; font-style:italic; font-size:.98em; padding:5.5px; padding-left:12.5px; padding-right:12.5px; }
 
 
 .photo img { max-width:90%; }
+.photoo img { max-width:90%; }
 .one { max-width:90%; }
 .two { max-width:90%; }
 .three { max-width:90%; }
@@ -91,6 +94,7 @@ a:hover { color:#666699; font-style:italic; font-size:.98em; padding:5.5px; padd
 @media screen and (max-width:900px)
 {
 	.photo { clear:both; width:80%; padding-left:0; }
+	.photoo { clear:both; width:80%; padding-left:10%; }
 	.babies { clear:both; width:80%; padding-top:2%; padding-left:5%; }
 	h1 { font-size:2.5em; line-height:1em; text-align:left; }
 	h2 { font-size:1.5em; line-height:2em; text-align:left; }
@@ -102,6 +106,7 @@ a:hover { color:#666699; font-style:italic; font-size:.98em; padding:5.5px; padd
 @media handheld, screen and (max-width:640px)
 {
 	.photo { clear:both; width:100%; }
+	.photoo { clear:both; width:100%; padding-left:10%; }
 	.babies { clear:both; width:80%; padding-top:2%; padding-left:5%; }
 	h1 { font-size:2.5em; line-height:1em; text-align:left; }
 	h2 { font-size:1.5em; line-height:2em; text-align:left; }
@@ -114,6 +119,7 @@ a:hover { color:#666699; font-style:italic; font-size:.98em; padding:5.5px; padd
 @media handheld, screen and (max-width:456px)
 {
 	.photo { clear:both; width:100%; }
+	.photoo { clear:both; padding-left:10%; }
 	.babies { clear:both; width:80%; padding-top:2%; padding-left:5%; }
 	h1 { font-size:2.5em; line-height:1em; text-align:left; }
 	h2 { font-size:1.5em; line-height:2em; text-align:left; }
@@ -132,6 +138,7 @@ a:hover { color:#666699; font-style:italic; font-size:.98em; padding:5.5px; padd
 @media handheld, screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait)
 {
 	.photo { clear:both; width:100%; }
+	.photoo { clear:both; width:100%; }
 	.babies { clear:both; width:80%; padding-top:2%; padding-left:5%; }
 	h1 { font-size:2.5em; line-height:1em; text-align:left; }
 	h2 { font-size:1.5em; line-height:2em; text-align:left; }
