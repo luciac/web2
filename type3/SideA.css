@@ -57,25 +57,25 @@ table {
 
 .cover { width:100%; position:fixed; top:0px; }
 .text { width:80%; margin:10%; position:relative; z-index:-1; }
-#flip a { width:130px; height:100px; position:fixed; bottom:0; right:0; z-index:1; }
+.flipp { display:none; }
+.nosee { text-decoration:none; font-family:Frutiger; font-size:.78em; color:brown; width:100px; height:80px; position:fixed; bottom:0; right:0; z-index:1; }
 
 
 
 
-@media screen and (max-width:900px)
+
+
+
+@media screen and (max-width:730px)
 {
+.nosee { display:none; }
+.flipp { display:block; text-decoration:none; width:130px; height:100px; position:fixed; bottom:0; right:0; z-index:1; }
 }
 
 
-@media handheld, screen and (max-width:640px)
+
+@media screen and (min-height:800px) and (max-width:730px)
 {
-	}
-
-
-
-
-
-@media handheld, screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait)
-{
-
+.nosee { display:none; }
+.flipp { display:block; text-decoration:none; width:130px; height:100px; position:fixed; bottom:0; right:0; z-index:1; }
 }
