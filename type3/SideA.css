@@ -57,6 +57,7 @@ table {
 
 .cover { width:100%; position:fixed; top:0px; }
 .text { width:80%; margin:10%; position:relative; z-index:-1; }
+#flip a { width:130px; height:100px; position:fixed; bottom:0; right:0; z-index:1; }
 
 
 
