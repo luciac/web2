@@ -253,13 +253,13 @@ function triangle() {
 $("#button-line").on("click",function() {
  $(".tool").removeClass("selected");
  $(this).addClass("selected");
- tool = "line";
+ tool = "dash";
  lineWidth(width);
  lineColor(color);
 });
 
 
-function line() {
+function dash() {
   angle(0);
   forward(50);
 }
