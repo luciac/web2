@@ -297,7 +297,7 @@ function circle() {
 /*DISSSSSSS ISSSS THEEEEEEEEEEEEEEEEEEE
 EEEEEEEEEEEE sun EEEEEEEEEEEEEEEEEEEEEE
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
-/*
+
 $("#button-sun").on("click",function() {
 	$(".tool").removeClass("selected");
 	$(this).addClass("selected");
@@ -356,4 +356,3 @@ function sun() {
 	
 	}
 	
-*/
