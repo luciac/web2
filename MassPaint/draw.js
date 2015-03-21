@@ -222,7 +222,6 @@ $("#clrred").on("click",function() {
 	$(this).addClass("selected");
 	tool="pen";
 	lineColor("red");
-	lineWidth(width);
 });
 
 $("#clrorange").on("click",function() {
@@ -230,7 +229,6 @@ $("#clrorange").on("click",function() {
 	$(this).addClass("selected");
 	tool="pen";
 	lineColor("orange");
-	lineWidth(width);
 });
 
 $("#clryellow").on("click",function() {
@@ -238,7 +236,6 @@ $("#clryellow").on("click",function() {
 	$(this).addClass("selected");
 	tool="pen";
 	lineColor("yellow");
-	lineWidth(width);
 });
 
 $("#clrnavajowhite").on("click",function() {
@@ -246,7 +243,6 @@ $("#clrnavajowhite").on("click",function() {
 	$(this).addClass("selected");
 	tool="pen";
 	lineColor("navajowhite");
-	lineWidth(width);
 });
 
 $("#clrgold").on("click",function() {
@@ -254,7 +250,6 @@ $("#clrgold").on("click",function() {
 	$(this).addClass("selected");
 	tool="pen";
 	lineColor("gold");
-	lineWidth(width);
 });
 
 $("#clrgreen").on("click",function() {
@@ -262,7 +257,6 @@ $("#clrgreen").on("click",function() {
 	$(this).addClass("selected");
 	tool="pen";
 	lineColor("green");
-	lineWidth(width);
 });
 
 $("#clrskyblue").on("click",function() {
