@@ -9,9 +9,89 @@ body, html { padding:0px; margin:0px; }
   font-size: 24px;
   padding:5px;
   border:1px solid #999;
-  background-color:white;
-}
+  background-color:lightgrey; }
 
 .buttons button.selected {
-  background-color:gray;
-}
+  background-color:gray; }
+
+
+
+.pallates {
+	background-color: lightgrey;
+	border:1px solid #999;
+	padding-left:5px; 
+	float:right; }
+.pallates button {
+	border:0; }
+
+
+.sizes {
+	background-color: lightgrey;
+	border:1px solid #999;
+	padding-left:5px; 
+	float:right; }
+.sizes button {
+	border:0;
+	padding:10px;
+	height:100%; }
+
+
+
+
+
+
+#clrred {
+	color: red; }
+
+#clrorange {
+	color: orange; }
+
+#clryellow {
+	color: yellow; }
+
+#clrnavajowhite {
+	color: navajowhite; }
+
+#clrgold {
+	color: gold; }
+
+#clrgreen {
+	color: green; }
+
+#clrskyblue {
+	color: SkyBlue; }
+
+#clrsteelblue {
+	color: SteelBlue; }
+
+#clraquamarine {
+	color: aquamarine; }
+
+#clrazure {
+	color: azure; }
+
+#clrchocolate {
+	color: chocolate; }
+
+#clrgrey {
+	color: grey; }
+
+#clrlightgrey {
+	color: lightgrey; }
+
+
+
+
+
+
+
+#xsmall {
+	font-size: 1px; }
+#small {
+	font-size: 4px; }
+#med {
+	font-size: 8px; }
+#large {
+	font-size: 12px; }
+#xlarge {
+	font-size: 16px; }
