@@ -59,7 +59,7 @@ $(document).on("mousedown",function(e) {
 
 $(document).on("mousemove",function(e) {
   e.preventDefault();
-  if(drawing || erasing) {
+  if(drawing) {
     lineTo(e.pageX,e.pageY);
   }
 });
