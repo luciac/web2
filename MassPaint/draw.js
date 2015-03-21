@@ -37,156 +37,7 @@ $("#button-pen").on("click",function() {
 
 
 
-/*THEEEEESSSE AREEEEEEEEEEEEEEEEEEEEEE
-EEEEEEEEEEEEEEcoloursEEEEEEEEEEEEEEEEE
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
 
-$("#clrred").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("red");
-	lineWidth(width);
-});
-
-$("#clrorange").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("orange");
-	lineWidth(width);
-});
-
-$("#clryellow").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("yellow");
-	lineWidth(width);
-});
-
-$("#clrnavajowhite").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("navajowhite");
-	lineWidth(width);
-});
-
-$("#clrgold").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("gold");
-	lineWidth(width);
-});
-
-$("#clrgreen").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("green");
-	lineWidth(width);
-});
-
-$("#clrskyblue").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("skyblue");
-});
-
-$("#clraquamarine").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("aquamarine");
-});
-
-$("#clrsteelblue").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("steelblue");
-});
-
-$("#clrazure").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("azure");
-});
-
-$("#clrchocolate").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("chocolate");
-});
-
-$("#clrgrey").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("grey");
-});
-
-$("#clrlightgrey").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("lightgrey");
-});
-
-$("#clrblack").on("click",function() {
-	$(".color").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineColor("black");
-});
-
-
-
-
-
-/*TTTTHHHHHHIIISS ISSS THHEEEEEEEEEEEEEEEEE
-EEEEEEEEEEEEEEEwidthEEEEEEEEEEEEEEEEEEEEEEE
-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
-
-$("#xsmall").on("click",function() {
-	$(".brushsize").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineWidth(1);
-});
-
-$("#small").on("click",function() {
-	$(".brushsize").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineWidth(4);
-});
-
-$("#med").on("click",function() {
-	$(".brushsize").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineWidth(8);
-});
-
-$("#large").on("click",function() {
-	$(".brushsize").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineWidth(12);
-});
-
-$("#xlarge").on("click",function() {
-	$(".brushsize").removeClass("selected");
-	$(this).addClass("selected");
-	tool="pen";
-	lineWidth(16);
-});
 
 
 
@@ -355,4 +206,160 @@ function sun() {
 	rays(30);
 	
 	}
-	
+
+
+
+
+
+
+
+/*THEEEEESSSE AREEEEEEEEEEEEEEEEEEEEEE
+EEEEEEEEEEEEE colours EEEEEEEEEEEEEEEE
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
+
+$("#clrred").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("red");
+	lineWidth(width);
+});
+
+$("#clrorange").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("orange");
+	lineWidth(width);
+});
+
+$("#clryellow").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("yellow");
+	lineWidth(width);
+});
+
+$("#clrnavajowhite").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("navajowhite");
+	lineWidth(width);
+});
+
+$("#clrgold").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("gold");
+	lineWidth(width);
+});
+
+$("#clrgreen").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("green");
+	lineWidth(width);
+});
+
+$("#clrskyblue").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("skyblue");
+});
+
+$("#clraquamarine").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("aquamarine");
+});
+
+$("#clrsteelblue").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("steelblue");
+});
+
+$("#clrazure").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("azure");
+});
+
+$("#clrchocolate").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("chocolate");
+});
+
+$("#clrgrey").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("grey");
+});
+
+$("#clrlightgrey").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("lightgrey");
+});
+
+$("#clrblack").on("click",function() {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineColor("black");
+});
+
+
+
+
+
+/*TTTTHHHHHHIIISS ISSS THHEEEEEEEEEEEEEEEEE
+EEEEEEEEEEEEEE width EEEEEEEEEEEEEEEEEEEEEE
+EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+
+$("#xsmall").on("click",function() {
+	$(".brushsize").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineWidth(1);
+});
+
+$("#small").on("click",function() {
+	$(".brushsize").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineWidth(4);
+});
+
+$("#med").on("click",function() {
+	$(".brushsize").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineWidth(8);
+});
+
+$("#large").on("click",function() {
+	$(".brushsize").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineWidth(12);
+});
+
+$("#xlarge").on("click",function() {
+	$(".brushsize").removeClass("selected");
+	$(this).addClass("selected");
+	tool="pen";
+	lineWidth(16);
+});	
