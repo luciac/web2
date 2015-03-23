@@ -13,6 +13,8 @@ $("#button-replay").on("click",function() {
 
 $("#button-eraser").on("click",function() {
 	$(".tool").removeClass("selected");
+	$(".color").removeClass("selected");
+	$(".brushsize").removeClass("selected");
 	$(this).addClass("selected");
 	tool = "eraser";
 	lineWidth(20);
@@ -55,6 +57,10 @@ $(document).on("mousedown",function(e) {
   moveTo(e.pageX,e.pageY);
   if(tool == "pen" || tool == "eraser") { 
     drawing = true; }
+  else if(tool == "bubble") {
+	bubble(); }
+  else if(tool == "sun") {
+	sun(); }
 });
 
 $(document).on("mousemove",function(e) {
@@ -80,69 +86,31 @@ $(document).on("mouseup",function(e) {
 
 
 
-$("#button-triangle").on("click",function() {
- $(".tool").removeClass("selected");
- $(this).addClass("selected");
- tool = "triangle";
- lineWidth(width);
- lineColor(color);
-});
-
-
-function triangle() {
-  angle(0);
-  forward(50);
-  rotate(120);
-  forward(50);
-  rotate(120);
-  forward(50);
-  rotate(120);
-}
 
 
 
-$("#button-line").on("click",function() {
- $(".tool").removeClass("selected");
- $(this).addClass("selected");
- tool = "dash";
- lineWidth(width);
- lineColor(color);
-});
 
 
-function dash() {
-  angle(0);
-  forward(50);
-}
-
-
-
-/*
 
 $("#button-bubble").on("click",function() {
 	$(".tool").removeClass("selected");
 	$(this).addClass("selected");
-	tool="circle";	
+	tool="bubble";	
 });
 
 
 
 
-function circle() {
-	angle(0);
-	forward(10);
-	rotate(10);
-	forward(10);
-	rotate(10);
-	forward(10);
-	rotate(10);
-	forward(10);
-	rotate(10);
-	forward(10);
-	rotate(10);
-	forward(10);
-	rotate(10);}
-*/
+function bubble() {
+	var circle=function(x) {
+	forward(x);
+	rotate(x/2); };
+
+	circle(15);
+
+	speed(1000);
+	for (var i=0; i < 50; i++) {
+		circle(20); } }
 
 
 /*DISSSSSSS ISSSS THEEEEEEEEEEEEEEEEEEE
@@ -153,8 +121,8 @@ $("#button-sun").on("click",function() {
 	$(".tool").removeClass("selected");
 	$(this).addClass("selected");
 	tool="sun";
-	lineColor("orange");
-	lineWidth(8);	
+	lineColor(width);
+	lineWidth(color);	
 });
 
 
@@ -190,7 +158,7 @@ function sun() {
 	forward(x);
 	rotate(120);
 	forward(x);
-	move(-40,13);
+	move(0);
 	 }
 
 	var circle=function(x) {
