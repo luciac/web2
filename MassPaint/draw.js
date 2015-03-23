@@ -185,6 +185,14 @@ function sun() {
 EEEEEEEEEEEEE colours EEEEEEEEEEEEEEEE
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE */
 
+$(".color").on("click",function(e) {
+	$(".color").removeClass("selected");
+	$(this).addClass("selected");
+	var col =$(this).data("color");
+	lineColor(col);
+});
+
+/*
 $("#clrred").on("click",function() {
 	$(".color").removeClass("selected");
 	$(this).addClass("selected");
@@ -282,6 +290,8 @@ $("#clrblack").on("click",function() {
 	tool="pen";
 	lineColor("black");
 });
+*/
+
 
 
 
@@ -291,6 +301,16 @@ $("#clrblack").on("click",function() {
 EEEEEEEEEEEEEE width EEEEEEEEEEEEEEEEEEEEEE
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
 
+
+$(".brushsize").on("click",function(e) {
+	$(".brushsize").removeClass("selected");
+	$(this).addClass("selected");
+	var size =$(this).data("width");
+	lineWidth(size);
+});
+
+
+/*
 $("#xsmall").on("click",function() {
 	$(".brushsize").removeClass("selected");
 	$(this).addClass("selected");
@@ -325,3 +345,4 @@ $("#xlarge").on("click",function() {
 	tool="pen";
 	lineWidth(16);
 });	
+*/
