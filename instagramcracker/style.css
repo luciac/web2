@@ -1,18 +1,26 @@
 div { background-color:white; 
-	width:28%;
+	width:300px;
 	float:left; 
 	margin:2.5%; }
 
-img { width:100%; }
+img { clear:both;
+	width:100%; }
 
-h6 { color:grey; 
+h6 { color:#4b7ba1; 
+	font-size:12px;
 	font-family:helvetica; 
-	width:70%; 
+	width:65%; 
 	float:left; 
-	padding:3%; }
+	padding:3%; 
+	margin-top:10px; }
 	
 .likes { font-family:helvetica;
 	color:darkgrey; 
 	width:20%; 
 	float:right;
-	padding:2%;}
+	padding:3%;
+	margin-top:10px; }
+
+.instantgrahmcrackers {
+	width:100%;
+	margin:0; }
