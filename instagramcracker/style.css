@@ -1,0 +1,18 @@
+div { background-color:white; 
+	width:28%;
+	float:left; 
+	margin:2.5%; }
+
+img { width:100%; }
+
+h6 { color:grey; 
+	font-family:helvetica; 
+	width:70%; 
+	float:left; 
+	padding:3%; }
+	
+.likes { font-family:helvetica;
+	color:darkgrey; 
+	width:20%; 
+	float:right;
+	padding:2%;}
