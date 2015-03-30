@@ -1,0 +1,231 @@
+
+
+/* Meyer Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END RESET */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html {height: 100%; overflow: hidden;}
+
+
+
+
+
+body { 
+  margin:0; padding:0;
+	perspective: 3px;
+	transform-style: preserve-3d;
+  height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  font-family: Delius; }
+
+
+/*
+.slide { position: relative; padding: 25vh 10%; width: 100vw; 
+box-sizing: border-box; transform-style: inherit;}
+*/
+
+
+.slide, .slide:before {
+  background: 2% 2% / cover;  
+} /*THIS CONTROLES PHOTOS*/
+
+.header {
+  text-align: center;
+  font-size: 2em;
+  color: red; } /*THIS IS THE END*/
+  
+  
+.text {padding-left:10%; padding-right:10%; padding-top:5%; padding-bottom:5%; }
+.photo {background:40%; background-size:60%; height:75%; top:0px;}
+
+.endphoto {background:40%; background-size:50%; height:95%; bottom:0px;}
+
+
+
+
+/*MINE*/
+h1 {font-family:Delius Unicase; font-weight:bold; padding-top:20px; line-height:1.4em; padding:5%; padding-left:10%; padding-bottom:5px;}
+p {font-family:Delius; padding-top:20px; line-height:1.4em; padding:0%; }
+
+#top {
+background-color: #f8d788;
+background-attachment: fixed;
+}
+
+
+
+
+#menu2 {position: relative; display inline-block; }
+#menu2:focus .numbers {display: block; }
+.numbers {position: absolute; z-index 11; display: none;}
+
+#menu2 li a {display:block; }
+#menu2 li ul {display:none; position:relative; }
+#menu2 img {height: 30px; margin-right:7px; margin-bottom:7px; }
+#menu2 li ul li {float:left; }
+
+#menu2 li:hover ul, #menu li.hover ul {
+	display: block;
+	position: absolute;
+	width: 100%; 
+	margin: 0;
+	padding: 0; 
+	background-color:white; }
+#menu2 li:hover li, #menu li.hover li {top:50px;
+	float: left; }
+#menu2 li:hover li a, #menu li.hover li a {}
+
+
+
+
+
+
+#one {background-image: url("images/1.png"); background-attachment: fixed; background-repeat: no-repeat; background-color:#f8d788; }
+#un {}
+#two {background-image: url("images/2.png"); background-attachment: fixed; background-color:#a2e8ee; background-repeat: no-repeat; }
+#deux {}
+#three {background-image: url("images/3.png"); background-attachment: fixed; background-color:#49a53d; background-repeat: no-repeat; }
+#trois {}
+#four {background-image: url("images/4.png"); background-attachment: fixed; background-color:#6b6969; background-repeat: no-repeat; } 
+#quatre {font-family:Delius Swash Caps; }
+#five {background-image: url("images/5.png"); background-attachment: fixed; background-color:#f9e2a4; background-repeat: no-repeat; }
+#cinq {}
+#six {background-image: url("images/6.png"); background-attachment: fixed; background-color:#91b2d6; background-repeat: no-repeat; }
+#sixx {}
+#seven {background-image: url("images/7.png"); background-attachment: fixed; background-color:#9b476b; background-repeat: no-repeat; color:white; }
+#sept {}
+#eight {background-image: url("images/8.png"); background-attachment: fixed; background-color:#62c9ef; background-repeat: no-repeat; }
+#huit {}
+#nine {background-image: url("images/9.png"); background-attachment: fixed; background-color:#000034; background-repeat: no-repeat; color:white; }
+#neuf {}
+#ten {background-image: url("images/10.png"); background-attachment: fixed; background-color:#CABFB6; background-repeat: no-repeat; }
+#dix {}
+#eleven {background-image: url("images/11.png"); background-attachment: fixed; background-color:#6a6969; background-repeat: no-repeat; }
+#onze {}
+#twelve {background-image: url("images/12.png"); background-attachment: fixed; background-color:#74d3c2; background-repeat: no-repeat; }
+#douze {}
+#thirteen {background-image: url("images/13.png"); background-attachment: fixed; background-color:#88d49c; background-repeat: no-repeat; }
+#treize {}
+#fourteen {background-image: url("images/14.png"); background-attachment: fixed; background-color:#dfccf0; background-repeat: no-repeat; }
+#quatorze {}
+#fifteen {background-image: url("images/15.png"); background-attachment: fixed; background-color:#edfa5f; background-repeat: no-repeat; }
+#quinze {}
+#sixteen {background-image: url("images/16.png"); background-attachment: fixed; background-color:#f33466; background-repeat: no-repeat; }
+#seize {}
+#seventeen {background-image: url("images/17.png"); background-attachment: fixed; background-color:#9f2c4a; background-repeat: no-repeat; }
+#dixsept {}
+#eighteen {background-image: url("images/18.png"); background-attachment: fixed; background-color:#6a6969; background-repeat: no-repeat; }
+#dixhuit {}
+#nineteen {background-image: url("images/19.png"); background-attachment: fixed; background-color:#4552a5; background-repeat: no-repeat; }
+#dixneuf {}
+#twenty {background-image: url("images/20.png"); background-attachment: fixed; background-color:black; background-repeat: no-repeat; }
+#vingt {}
+#twentyone {background-image: url("images/21.png"); background-attachment: fixed; background-color:#ffe400; background-repeat: no-repeat; }
+#vingtetun {}
+#end {background-image: url("images/gabbanager.png"); background-attachment: fixed; background-color:#3d8f8d; background-repeat: no-repeat; }
+#fin {}
+/*MINE*/
+
+
+
+
+
+
+
+@media screen and (max-width: 600px)
+  {
+  .text {padding-left:10%; padding-right:10%; padding-top:5%; padding-bottom:5%; }
+  .photo {background:20%; background-size:100%; height:90%; top:0px;}
+  }
+
+
+
+
+@media screen and (max-height: 800px)
+  {
+  .text {padding-left:10%; padding-right:10%; padding-top:5%; padding-bottom:5%; }
+  .photo {background:50%; background-size:40%; height:80%; top:0px;}
+  }
+
+
+
+@media screen and (max-height: 800px) (max-width:1110px)
+  {
+  .text {padding-left:10%; padding-right:10%; padding-top:5%; padding-bottom:5%; }
+  .photo {background:40%; background-size:30%; height:70%; top:0px;}
+  }

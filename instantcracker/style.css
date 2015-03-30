@@ -1,0 +1,27 @@
+div { background-color:white; 
+	width:300px;
+	height:500px;
+	float:left; 
+	margin:2.5%; }
+
+img { clear:both;
+	width:100%; }
+
+h6 { color:#4b7ba1; 
+	font-size:12px;
+	font-family:helvetica; 
+	width:65%; 
+	float:left; 
+	padding:3%; 
+	margin-top:10px; }
+	
+.likes { font-family:helvetica;
+	color:darkgrey; 
+	width:20%; 
+	float:right;
+	padding:3%;
+	margin-top:10px; }
+
+.instantgrahmcrackers {
+	width:100%;
+	margin:0; }
