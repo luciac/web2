@@ -23,7 +23,7 @@ else if (howold <= 20) {
 	$("#first").removeClass("gone");
 	}
 else if (howold >= 21) {
-	window.location.href = 'http://luciac.github.io/web2/21secrets/'; 
+	window.location.href = 'http://luciac.github.io/web2/21secrets/21'; 
 	} 
 
 
