@@ -86,6 +86,8 @@ background-color: #f8d788;
 background-attachment: fixed;
 }
 
+#back { z-index:-99; }
+
 img {width: 50%;
 	position:relative; }
 
@@ -125,9 +127,28 @@ h2 { font-size: 50px;
 
 
 #two { display:block; }
-
-
-
+#two img {
+	width:80%; 
+	padding:0;
+	margin:0; 
+	z-index:0; }
+.cloud { position:relative;
+	top:-500px;
+	left:10%;}
+.claud { position:relative;
+	top:-1027px;
+	opacity:.5;
+	left:10%; }
+#two p { z-index:99;
+	position:relative; 
+	top:-150px;
+	left:-200px; }
+#two #secrettwo img {
+	width:30%; }
+.secrettwo {
+	position:relative;
+	top:-1600px; }
+	
 
 
 
