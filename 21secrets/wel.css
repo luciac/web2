@@ -1,0 +1,270 @@
+
+
+/* Meyer Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END RESET */
+
+
+
+
+
+
+
+
+
+
+body {
+	font-family: Delius; }
+
+#bgcolor {
+	background-color: #f8d788;
+	z-index:-99;
+	height:100vh;
+	width:100vw;
+	position:fixed; }
+
+
+#top {
+background-color: #f8d788;
+background-attachment: fixed;
+position:fixed;
+}
+
+
+
+h1 {font-family:Delius Unicase; font-weight:bold; padding-top:20px; line-height:1.4em; padding:5%; padding-left:10%; padding-bottom:5px;}
+
+p {font-family:Delius; padding-top:20px; line-height:1.4em; }
+
+/*-------------------------------------------------------------------------
+----------------SECRET ONE --------------------------------------------------------------------------*/
+
+#one { height:200vh;
+	width:100vw; overflow:hidden;}
+
+#one .innards { width:100%;
+	opacity:0;
+	position:fixed;
+	top:10px;
+	z-index:2; }
+.empty { 
+	clear:both; position:relative;
+	background-color:red;
+	height:90vh;
+	width: 100wh; 
+	margin:0px; }
+	
+h2 { font-size: 50px;
+	position: absolute;
+	top:50%; left:50%; 
+	transform: translate(-50%, -50%); 
+	padding:20px; 
+	opacity:0; }
+#one p {font-family:Delius; line-height:1.4em; 
+	padding:0%;
+	width:40%; 
+	float:right; 
+	padding-right:5%; padding-top: 30%; }
+#one img {width: 45%;
+	padding-top:5%;}
+
+/*-------------------------------------------------------------------------
+----------------SECRET TWO --------------------------------------------------------------------------*/
+
+#two { display:block; 
+	clear:both;
+	width:100vw;
+	overflow:hidden;
+	height:200vh; }
+#two img {
+	width:700px;
+	height:auto; 
+	padding-left:0;
+	margin:0; 
+	z-index:0; }
+.cloud { position: absolute;
+	left:10%;
+	opacity:.15;
+	z-index:5; }
+.claud { position: relative;
+	opacity:.5;
+	left:10%;
+	z-index:5; }
+#two p { z-index:99;
+	position:relative;
+	top: 295px;
+	width:470px;
+	left:210px; 
+	padding:0;
+	margin:0; }
+#sectrettwo img {
+	position: relative;
+	top:-470px;
+	left:200px;
+	width:420px;
+	z-index:-1; }
+	
+
+/*-------------------------------------------------------------------------
+----------------SECRET THREE --------------------------------------------------------------------------*/
+	
+
+#three {
+	overflow:hidden; 
+	width:99vw; 
+	height:100vh; }
+.secretthree {
+	width:700px;
+	padding-left:100px; }
+.brain { position:relative;
+	width:700px;
+	top:-1520px;
+	display: none;
+	padding-left:100px; }
+
+.cosmicbrain { position:relative;
+	top:-2034px;
+	width:700px;
+	opacity:0;
+	padding-left:100px; }
+
+/*-------------------------------------------------------------------------
+----------------THESE ARE TTRIGGER DIVS --------------------------------------------------------------------------*/
+#pauseasec { width:100vw;
+	height:170vh; background-color: lightblue;}
+#zoomtigger { width:100vw;
+	height:100vh; background-color:green; }
+#braintigger { width:100vw;
+	height:100vh; background-color: orange; }
+#cosmictigger { width:100vw;
+	height:100vh; background-color: purple; }
+#unfixtrigger { width:100vw;
+	height:100vh; background-color: red; }
+
+
+
+#four { height:100vh; }
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------
+----------------THESE ARE THE SCROLLING CLASSES --------------------------------------------------------------------------*/
+
+.hideit { opacity:0; }
+.fade-in { opacity:1; transition: opacity .5s ease .25s; }
+.showit { display:block; }
+.innards.fade-in { opacity:1; transition: opacity .5s ease .25s; }
+.fade-out { opacity:0; transition: opacity .5s ease .25s; }
+.backgroundtwo { background-color: #a2e8ee; }
+.fixit { position:fixed; bottom:0;}
+.zoom { width:1800px;
+	transition: width .75s; 
+	padding:0;
+	position:relative;
+	left:-130px; }
+.unfixit { position:relative; bottom:0;}
+.unzoom { width:1800px;
+	transition: width .75s; 
+	padding:0;
+	position:relative;
+	left:-130px; }
+
+
+
+
+
+/*-------------------------------------------------------------------------
+----------------IGNORE THE REST OF THIS. ITS FOR LATER USE --------------------------------------------------------------------------*/
+
+/*
+#two {background-image: url("images/2.png"); background-attachment: fixed; background-color:#a2e8ee; background-repeat: no-repeat; }
+#deux {}
+#three {background-image: url("images/3.png"); background-attachment: fixed; background-color:#49a53d; background-repeat: no-repeat; }
+#trois {}
+#four {background-image: url("images/4.png"); background-attachment: fixed; background-color:#6b6969; background-repeat: no-repeat; } 
+#quatre {font-family:Delius Swash Caps; }
+#five {background-image: url("images/5.png"); background-attachment: fixed; background-color:#f9e2a4; background-repeat: no-repeat; }
+#cinq {}
+#six {background-image: url("images/6.png"); background-attachment: fixed; background-color:#91b2d6; background-repeat: no-repeat; }
+#sixx {}
+#seven {background-image: url("images/7.png"); background-attachment: fixed; background-color:#9b476b; background-repeat: no-repeat; color:white; }
+#sept {}
+#eight {background-image: url("images/8.png"); background-attachment: fixed; background-color:#62c9ef; background-repeat: no-repeat; }
+#huit {}
+#nine {background-image: url("images/9.png"); background-attachment: fixed; background-color:#000034; background-repeat: no-repeat; color:white; }
+#neuf {}
+#ten {background-image: url("images/10.png"); background-attachment: fixed; background-color:#CABFB6; background-repeat: no-repeat; }
+#dix {}
+
+#end {background-image: url("images/gabbanager.png"); background-attachment: fixed; background-color:#3d8f8d; background-repeat: no-repeat; }
+#fin {}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

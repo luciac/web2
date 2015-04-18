@@ -1,0 +1,9 @@
+     .video { width: 20%;
+       float:left;
+       padding:2%; 
+       height:220px;
+      }
+      .video h4 { font-size:11px; 
+         font-family:helvetica;
+         height:30px; }
+      .video img { width:100%; }
