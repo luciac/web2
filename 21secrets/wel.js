@@ -39,9 +39,6 @@ $("#zoomtigger").on("arrived",function(e) {
 	$(".secretthree").addClass("zoom");
 	});
 
-$("#unfixtigger").on("arrived",function(e) {
-	$("#three").addClass("unfixit");
-	});
 
 //FAILLL WHY DO YOU FAIILLL!??????????????????????????????????????????????
 
@@ -51,5 +48,9 @@ $("#braintigger").on("arrived",function(e) {
 
 $("#cosmictigger").on("arrived",function(e) {
 	$(".cosmicbrain").addClass("showit");
+	});
+
+$("#unfixtigger").on("arrived",function(e) {
+	$("#three").addClass("unfixit");
 	});
 

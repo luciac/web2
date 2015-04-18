@@ -217,7 +217,7 @@ h2 { font-size: 50px;
 	position:relative;
 	left:-130px; }
 .unfixit { position:relative; bottom:0;}
-.unzoom { width:1800px;
+.unzoom { width:700px;
 	transition: width .75s; 
 	padding:0;
 	position:relative;
