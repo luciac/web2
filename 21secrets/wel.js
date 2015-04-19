@@ -5,6 +5,8 @@ $(".innards").scrollFlight();
 $(".bgcolor").scrollFlight();
 $(".goaway").scrollFlight();
 $(".colorchangetwo").scrollFlight();
+$("#two").scrollFlight();
+$(".partclouds").scrollFlight();
 $("#three").scrollFlight();
 $("#zoomtigger").scrollFlight();
 $("#braintigger").scrollFlight();
@@ -40,10 +42,13 @@ $(".colorchangetwo").on("arrived",function(e) {
 
 $("#two").on("arrived",function(e) {
 	$(this).addClass("fixit");
-	$("#two").addClass("hideit");
-	console.log("IT FIXXEDD");
+	console.log("angels fixed");
 	});
 
+$(".partclouds").on("arrived",function(e) {
+	$(".cloud").addClass("totheleft");
+	console.log("it was pushed!");
+	});
 
 
 //SUCCESS inserthappygif

@@ -121,7 +121,7 @@ h2 { font-size: 50px;
 .goaway { width:100vw;
 	height:100vh; }
 .colorchangetwo { width:100vw;
-	height:100vh; background-color: green; }
+	height:60vh; background-color: green; }
 
 
 
@@ -131,11 +131,11 @@ h2 { font-size: 50px;
 /*-------------------------------------------------------------------------
 ----------------SECRET TWO --------------------------------------------------------------------------*/
 
-#two { display:block; 
+#two { 
 	clear:both;
 	width:100vw;
 	overflow:hidden;
-	height:200vh; }
+	height:90vh; }
 #two img {
 	width:700px;
 	height:auto; 
@@ -172,8 +172,8 @@ h2 { font-size: 50px;
 
 /*-------------------------------------------------------------------------
 ----------------THESE ARE TTRIGGER DIVS --------------------------------------------------------------------------*/
-#partclouds { width:100vw;
-	height:170vh; background-color: green;}
+.partclouds { width:100vw;
+	height:98vh; background-color: orange;}
 
 
 
@@ -218,16 +218,16 @@ h2 { font-size: 50px;
 #pauseasec { width:100vw;
 	height:170vh; background-color: lightblue;}
 #zoomtigger { width:100vw;
-	height:100vh; background-color:green; }
+	height:100vh; }
 #braintigger { width:100vw;
-	height:100vh; background-color: orange; }
+	height:100vh; }
 #cosmictigger { width:100vw;
-	height:100vh; background-color: purple; }
+	height:100vh; }
 #ptigger { width:100vw;
-	height:100vh; background-color: lightpink; }
+	height:100vh; }
 
 #pausemore { width:100vw;
-	height:200vh; background-color: lightgreen; }
+	height:200vh; }
 #unfixtigger { width:100vw;
 	height:100vh; background-color: red; }
 
@@ -263,7 +263,7 @@ h2 { font-size: 50px;
 	left:-130px; }
 .unzoom { width:700px;
 	transition: width .75s; }
-
+.totheleft { transform: translate (-100px,0) .6s; }
 
 
 
