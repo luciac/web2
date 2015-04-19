@@ -2,11 +2,15 @@
 $(".fadeee").scrollFlight();
 $(".empty").scrollFlight();
 $(".innards").scrollFlight();
-$("#bgcolor").scrollFlight();
+$(".bgcolor").scrollFlight();
+$(".goaway").scrollFlight();
+$(".colorchangetwo").scrollFlight();
 $("#three").scrollFlight();
 $("#zoomtigger").scrollFlight();
-
-
+$("#braintigger").scrollFlight();
+$("#cosmictigger").scrollFlight();
+$("#ptigger").scrollFlight();
+$("#unfixtigger").scrollFlight();
 
 
 
@@ -16,41 +20,62 @@ $(".fadeee").on("arrived",function(e) {
 	
 $(".fadeee").on("departing",function(e) {
 	$("#one h2").addClass("fade-out");
-	$("#one .innards").addClass("fade-in");
+	console.log("h2 gone");
 	});
 	
 $(".empty").on("arrived",function(e) {
 	$(".innards").addClass("fade-in");
-	$("#bgcolor").addClass("backgroundtwo");
-	});
-$(".empty").on("departing",function(e) {
-	$("#one .innards").addClass("fade-out");
+	console.log("secret one faded in");
 	});
 	
+$(".goaway").on("arrived",function(e) {
+	$(".innards").removeClass("fade-in");
+	console.log("be gone satan!");
+	});	
+	
+$(".colorchangetwo").on("arrived",function(e) {
+	$(".bgcolor").addClass("backgroundtwo");
+	console.log("swtich");
+	});
+
+$("#two").on("arrived",function(e) {
+	$(this).addClass("fixit");
+	$("#two").addClass("hideit");
+	console.log("IT FIXXEDD");
+	});
+
 
 
 //SUCCESS inserthappygif
 $("#three").on("arrived",function(e) {
 	$(this).addClass("fixit");
-	$("#two").addClass("hideit");
+	$(".bgcolor").addClass("backgroundthree");
+	console.log("IT FIXXEDD");
 	});
-
 $("#zoomtigger").on("arrived",function(e) {
 	$(".secretthree").addClass("zoom");
+	console.log("it zoomed");
 	});
-
-
-//FAILLL WHY DO YOU FAIILLL!??????????????????????????????????????????????
-
 $("#braintigger").on("arrived",function(e) {
 	$(".brain").addClass("showit");
+	console.log("chinchilla brainnsss");
+	});
+$("#cosmictigger").on("arrived",function(e) {
+	$(".cosmicbrain").addClass("fade-in");
+	console.log("cosmic brain");
+	});
+$("#ptigger").on("arrived",function(e) {
+	$(".thirdpar").addClass("appear");
+	console.log("paragraph");
 	});
 
-$("#cosmictigger").on("arrived",function(e) {
-	$(".cosmicbrain").addClass("showit");
-	});
 
 $("#unfixtigger").on("arrived",function(e) {
-	$("#three").addClass("unfixit");
+	$("#three").removeClass("fixit");
+	$(".secretthree").removeClass("zoom");
+	$(".brain").removeClass("showit");
+	$(".cosmicbrain").removeClass("fade-in");
+	$(".thirdpar").removeClass("appear");
+	console.log("unfixed");
 	});
 
