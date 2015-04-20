@@ -65,20 +65,7 @@ table {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.nope { width=105%;
+.nope { width:105%;
 	overflow:hidden; }
 
 .nope h1 { color: white;
@@ -137,3 +124,21 @@ table {
 .gone { display:none; }
 	
 .omgfungifs { display:none; }
+
+
+
+
+img { height:100vh; 
+	z-index:-1;
+	position:relative;
+	left:-350px; }
+#willsmith { width:100vw;
+	height:100vh; 
+	overflow:hidden; }
+.nullll h1 { color: red; 
+	font-size: 50px;
+	font-family:oswald;
+	position: absolute;
+	bottom:40px; left:50%; 
+	transform: translate(-50%, -50%); 
+	z-index:99; }

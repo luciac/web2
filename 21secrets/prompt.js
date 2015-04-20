@@ -16,7 +16,10 @@ var nope = function (coin) {
 
 
 
-if (howold < 11) {
+if (howold == null) {
+	$("#willsmith").removeClass("gone");
+	}
+else if (howold < 11) {
 	$("#second").removeClass("gone");
 	}
 else if (howold <= 20) {
