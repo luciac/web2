@@ -63,7 +63,7 @@ table {
 
 
 
-
+body { width:100vw; height:100vh; overflow:hidden; }
 
 .nope { width:105%;
 	overflow:hidden; }
@@ -128,7 +128,7 @@ table {
 
 
 
-img { height:100vh; 
+.nullll img { height:100vh; 
 	z-index:-1;
 	position:relative;
 	left:-350px; }
@@ -137,6 +137,25 @@ img { height:100vh;
 	overflow:hidden; }
 .nullll h1 { color: red; 
 	font-size: 50px;
+	font-family:oswald;
+	position: absolute;
+	bottom:40px; left:50%; 
+	transform: translate(-50%, -50%); 
+	z-index:99; }
+
+
+
+
+.emptyness img { height:100vh; 
+	z-index:-1;
+	position:relative;
+	left:-150px; }
+#empty { width:100vw;
+	height:100vh; 
+	overflow:hidden; }
+.emptyness h1 { color: white; 
+	font-size: 40px;
+	width:70vw;
 	font-family:oswald;
 	position: absolute;
 	bottom:40px; left:50%; 
