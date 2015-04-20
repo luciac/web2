@@ -1,18 +1,27 @@
+$(".bgcolor").scrollFlight();
 
 $(".fadeee").scrollFlight();
-$(".empty").scrollFlight();
 $(".innards").scrollFlight();
-$(".bgcolor").scrollFlight();
+
+$(".empty").scrollFlight();
 $(".goaway").scrollFlight();
 $(".colorchangetwo").scrollFlight();
+
 $("#two").scrollFlight();
+
 $(".partclouds").scrollFlight();
+$(".makeitallgoaway").scrollFlight();
+
 $("#three").scrollFlight();
+
 $("#zoomtigger").scrollFlight();
 $("#braintigger").scrollFlight();
 $("#cosmictigger").scrollFlight();
 $("#ptigger").scrollFlight();
 $("#unfixtigger").scrollFlight();
+
+
+
 
 
 
@@ -46,8 +55,15 @@ $("#two").on("arrived",function(e) {
 	});
 
 $(".partclouds").on("arrived",function(e) {
-	$(".cloud").addClass("totheleft");
+	$(".cloud").addClass("cloudmoves");
+	$(".claud").addClass("claudmoves");
+	$(".secondpar").addClass("fade-out");
 	console.log("it was pushed!");
+	});
+
+$(".makeitallgoaway").on("arrived",function(e) {
+	$("#two").removeClass("fixit");
+	console.log("unfixed the angel");
 	});
 
 

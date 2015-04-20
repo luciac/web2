@@ -73,7 +73,6 @@ body {
 
 
 #top {
-background-color: #f8d788;
 background-attachment: fixed;
 position:fixed;
 }
@@ -121,7 +120,7 @@ h2 { font-size: 50px;
 .goaway { width:100vw;
 	height:100vh; }
 .colorchangetwo { width:100vw;
-	height:60vh; background-color: green; }
+	height:60vh; }
 
 
 
@@ -144,10 +143,10 @@ h2 { font-size: 50px;
 	z-index:0; }
 .cloud { position: absolute;
 	left:10%;
-	opacity:.15;
+	opacity:1;
 	z-index:5; }
 .claud { position: relative;
-	opacity:.5;
+	opacity:1;
 	left:10%;
 	z-index:5; }
 #two p { z-index:99;
@@ -173,12 +172,17 @@ h2 { font-size: 50px;
 /*-------------------------------------------------------------------------
 ----------------THESE ARE TTRIGGER DIVS --------------------------------------------------------------------------*/
 .partclouds { width:100vw;
-	height:98vh; background-color: orange;}
+	height:98vh; }
+.makeitallgoaway { width:100vw;
+	height:98vh; }
 
 
-
-
-
+@-webkit-keyframes cloudmove {
+   from { -webkit-transform: translateX(0); }
+   to {  -webkit-transform: translateX(-1000px); } }
+@-webkit-keyframes claudmove {
+   from { -webkit-transform: translateX(0); }
+   to {  -webkit-transform: translateX(1000px); } }
 
 
 
@@ -215,8 +219,8 @@ h2 { font-size: 50px;
 
 /*-------------------------------------------------------------------------
 ----------------THESE ARE TTRIGGER DIVS --------------------------------------------------------------------------*/
-#pauseasec { width:100vw;
-	height:170vh; background-color: lightblue;}
+.pauseasec { width:100vw;
+	height:170vh; }
 #zoomtigger { width:100vw;
 	height:100vh; }
 #braintigger { width:100vw;
@@ -229,7 +233,7 @@ h2 { font-size: 50px;
 #pausemore { width:100vw;
 	height:200vh; }
 #unfixtigger { width:100vw;
-	height:100vh; background-color: red; }
+	height:100vh; }
 
 
 
@@ -252,8 +256,8 @@ h2 { font-size: 50px;
 .innards.fade-in { opacity:1; transition: opacity .5s ease .25s; }
 .fade-out { opacity:0; transition: opacity .5s ease .25s; }
 .appear { opacity:1; transition: opacity .5s ease .25s; }
-.backgroundtwo { background-color: #a2e8ee; }
-.backgroundthree { background-color: #49a53d; }
+.backgroundtwo { background-color: #a2e8ee; transition: background-color 2s }
+.backgroundthree { background-color: #49a53d; transition: background-color 2s}
 
 .fixit { position:fixed; bottom:0;}
 .zoom { width:1800px;
@@ -263,7 +267,20 @@ h2 { font-size: 50px;
 	left:-130px; }
 .unzoom { width:700px;
 	transition: width .75s; }
-.totheleft { transform: translate (-100px,0) .6s; }
+.cloudmoves { -webkit-animation-name: cloudmove;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1; 
+  -webkit-animation-fill-mode: forwards; }
+.claudmoves { -webkit-animation-name: claudmove;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards; }
+
+
+
+
+
+
 
 
 
