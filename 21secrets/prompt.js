@@ -31,10 +31,12 @@ else if (howold <= 20) {
 else if (isNaN(howold)) {
 	$("#tres").removeClass("gone");
 	}
-else if (howold >= 21) {
+else if (howold >= 21 && howold <= 60) {
 	window.location.href = 'http://luciac.github.io/web2/21secrets/welcome'; 
 	} 
-
+else if (howold > 60) {
+	$("#old").removeClass("gone");
+	}
 
 
 /*
