@@ -161,3 +161,21 @@ body { width:100vw; height:100vh; overflow:hidden; }
 	bottom:40px; left:50%; 
 	transform: translate(-50%, -50%); 
 	z-index:99; }
+	
+	
+	
+.old img { height:100vh; 
+	z-index:-1;
+	position:relative;
+	left:-150px; }
+#old { width:100vw;
+	height:100vh; 
+	overflow:hidden; }
+.old h1 { color: white; 
+	font-size: 40px;
+	width:70vw;
+	font-family:oswald;
+	position: absolute;
+	bottom:40px; left:50%; 
+	transform: translate(-50%, -50%); 
+	z-index:99; }

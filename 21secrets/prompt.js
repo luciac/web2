@@ -36,9 +36,11 @@ else if (howold >= 21) {
 	} 
 
 
+
 /*
-if (howold != number) {
-	$("#tres").removeClass("gone");
-	}
-*/	
-	
+else if (howold <= 70 && howold >= 20) {
+	window.location.href = 'http://luciac.github.io/web2/21secrets/welcome'; 
+	} 
+else if (howold >= 70) {
+	$("#old").removeClass("gone");
+	}	*/
