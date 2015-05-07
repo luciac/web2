@@ -156,12 +156,13 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 #about { z-index:-4; }
 .aboutbovasimage { z-index: -10; height:120vh; 
 	position: absolute; top:0; left:0; }
-.aboutbovasbox { width: 40%; height:60%; 
+.blackbox { width: 40%; height:60%; 
 	position:absolute; top:20%; left:20%;
 	background-color:black; opacity:.75; z-index:-7;
 	line-height:19px; }
-.aboutblurb { width:30%; position:absolute; top:20%; left:20%;
-	padding:5%; font-size: 15px; }
+.aboutbovasbox { padding-top:50px; padding-left:10px; width:90%; opacity:1; }
+.aboutblurb { width:70%; position:absolute; top:30%; left:10%;
+	padding:5%; font-size: 15px; opacity:1; }
 #videolinks { }
 #videolinks h1 { font-size:15px; padding-bottom: 30px; }
 #videolinks a { padding: 0; padding-bottom:25px; margin: 0; }
