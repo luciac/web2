@@ -1,0 +1,86 @@
+function showModal(item) {
+   $(".modal").empty(); //so it grabs class modal and does empty???
+   
+   var $h1 = $("<h1>").text(item.name); //it adds an h1 with the name
+   var $img = $("<img>").attr("src",item.Image);//it ads an img with the source of your sheet
+   var $p = $("<p class='description'>").text(item.description);//this one makes a description p
+
+   $(".modal").append($h1,$img,$p);//this adds that shit inside the modal.
+   
+   $(".overlay").show();//this does what? it adds show to overlay?????????
+   $(".modal").show(); }
+
+
+
+
+
+function hideModal() {
+  $(".overlay").hide(); //it hides the modal???????????????????????????????
+  $(".modal").hide(); }
+
+
+
+
+
+function addItem(item) {
+  var $li = $("<div>").addClass("item").addClass(item.Color); //this ads a div with class item DOESITHAVEANYTHINGTODOWITHUPTHERE??????? and also adds class of colour from item		WHATTHEFUCKISITEM???
+  $li.attr("data-category",item.Color); //????????????????????????
+  var $h2 = $("<h2 class='name'>").text(item.Name);//adds h2 with name
+  var $p = $("<p class='description'>").text(item.Description);//adds p description
+  $li.append($h2).append($p); //ads the name and description to the li?
+  $li.on("click",function(e) {
+      showModal(item);
+  });
+  $(".collection").append($li);//adds the li to the collection
+};
+
+
+
+
+
+
+function addItems(data) {
+  for(var i=0;i<data.length;i++) {
+    addItem(data[i]); }
+}
+//does it like a million times
+
+
+
+
+function callback(data) { 
+  addItems(data);
+  var $container = $('.collection');
+  $container.packery({
+    itemSelector: '.item',
+    gutter: 10
+  });//?????????????????????????????????????????????????????????????????????
+  var myCollection = $(".item").collection({
+    filters: { 
+      "title": "h2",
+      "category": "[data-category]" },
+    update: function() { 
+      $container.packery(); 
+      setTimeout(function() { $container.packery()},600); },
+    hide: function($elem) { $elem.hide(); },
+    show: function($elem) { $elem.fadeIn(500); },
+  });//?????????????????????????????????????????????????????????????????????
+  $(".category").on("click",function(e) { //when class category is clicked
+      var category = $(this).data("category");
+      $("#filter-bar button").removeClass("selected");//the barbutton is unselected
+      $(this).addClass("selected"); //butwhatevs you clicked is selected
+      myCollection.filtered("category",category);//?????????????????????????
+  });
+  $("#search").on("change keyup",function(e) { //when you type
+      myCollection.filtered("title", $(this).val()); //?????????????????????
+  });
+  $(".overlay").on("click",function(e) { //?????????????????????????????????
+      hideModal();
+  });
+}
+
+
+  Tabletop.init( { key: "https://docs.google.com/spreadsheets/d/1QscbX7H5HDUSQY37Yv_Sq4r8Ih1-yq2tnbe4bOXJ5Es/pubhtml",
+                   callback: callback,
+                   simpleSheet: true } )
+

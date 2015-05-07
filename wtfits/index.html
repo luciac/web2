@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Collection Example</title>
+  <script src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
+  <script src='http://cykod.github.io/Collection.js/packery.pkgd.min.js'></script>
+  <script src='http://cykod.github.io/Collection.js/tabletop.js'></script>
+  <script src='http://cykod.github.io/Collection.js/collection.js'></script>
+  <link type='text/css' rel='stylesheet' href='style.css' />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+
+<!--
+		<button id='button-emptystar'><span class="fa fa-star-o"></span></button>
+		<button id='button-star'><span class="fa fa-star"></span></button>
+
+-->
+
+
+
+<body>
+
+<div id='filter-bar-wrapper'>
+	<div id="topnav">
+		<button id='button-menu'><span class="fa fa-bars"></span></button>
+		<button id='button-flter'><span class="fa fa-filter"></span></button>
+	    <input type='text' id='search' placeholder='search'/>
+		<button id='button-search'><span class="fa fa-search"></span></button>
+	</div> <!-- END TOP NAV-->
+  <div id='filter-bar'>
+    <button data-rating=""      class='rating selected' id="all-button">All</button>
+    <button data-rating="5"  class='rating'>5 star</button>
+    <button data-rating="4"   class='rating'>4 star</button>
+  </div>
+</div>
+
+<div class='collection'>
+ 
+
+
+</div>
+
+<div class='overlay'></div>
+<div class='modal'></div>
+<script>
+
+function showRating(item,$div) {
+
+	var $stars = $("<div class='ratingg'>");
+	var rating = parseInt(item.rating,10); 
+	for (var i=0; i < rating; i++) {
+		var $astar = $("<span class='fa fa-star'>");
+		$stars.append($astar);
+		}
+	$div.append($stars);
+   
+
+	}
+
+function showModal(item) {
+   $(".modal").empty();
+   var $div = $("<div class='modalwords'>");
+   var $h1 = $("<h1 class='title'>").text(item.name);
+   var $year = $("<h1 class='year'>").text(item.year);
+   var $dur = $("<h2 class='dur'>").text(item.durration + " minutes");
+   var $tag = $("<h2 class='tag'>").text(item.tagline);
+  <!-- var $rating = $-->
+   var $mood = $("<h3 class='mood'>").text(item.tags);
+   var $who = $("<h2 class='parh1'>").text(item.creator);
+   var $crtr = $("<h2 class='peoplelinks'>").text("Created by");
+   var $cast = $("<h2 class='parh1'>").text("Cast");
+   <!-- var $ppl = $("<h2 class='peoplelinks'>").text(item.cast);-->
+   var $img = $("<img>").attr("src",item.posterimg);
+   var $p = $("<p class='description'>").text(item.description);
+   
+   $div.append($h1,$year,$dur,$tag,$mood);
+   showRating(item,$div);
+   $(".modal").append($img,$div);
+   $(".overlay").show();
+   $(".modal").show(); }
+
+
+
+function hideModal() {
+  $(".overlay").hide();
+  $(".modal").hide(); }
+
+
+
+function addItem(item) {
+  var $li = $("<div>").addClass("item").addClass(item.rating);
+  var $contain = $("<div class='cropit'>")
+  $li.attr("data-rating",item.rating);
+  var $h2 = $("<h2 class='name'>").text(item.name);
+  var $img = $("<img class='banner'>").attr("src",item.bannerimg);
+
+  $contain.append($img)
+  $li.append($contain).append($h2);
+  $li.on("click",function(e) {
+      showModal(item);
+  });
+  $(".collection").append($li);
+};
+
+function addItems(data) {
+  for(var i=0;i<data.length;i++) {
+    addItem(data[i]);
+  }
+}
+
+
+function callback(data) { 
+
+  addItems(data);
+  var $container = $('.collection');
+  $container.packery({
+    itemSelector: '.item',
+  });
+  var myCollection = $(".item").collection({
+    filters: { 
+      "title": "h2",
+      "rating": "[data-rating]" },
+
+    update: function() { 
+      $container.packery(); 
+      setTimeout(function() { $container.packery()},600); },
+    hide: function($elem) { $elem.hide(); },
+    show: function($elem) { $elem.fadeIn(500); },
+  });
+
+  $(".rating").on("click",function(e) {
+      var rating = $(this).data("rating");
+      $("#filter-bar button").removeClass("selected");
+      $(this).addClass("selected");
+      myCollection.filtered("rating",rating);
+  });
+
+  $("#search").on("change keyup",function(e) {
+      myCollection.filtered("title", $(this).val());
+  });
+
+  $(".overlay").on("click",function(e) {
+      hideModal();
+  });
+
+}
+
+
+  Tabletop.init( { key: "https://docs.google.com/spreadsheets/d/1QscbX7H5HDUSQY37Yv_Sq4r8Ih1-yq2tnbe4bOXJ5Es/pubhtml",
+                   callback: callback,
+                   simpleSheet: true } )
+
+
+</script>
+	
+</body>
+</html>

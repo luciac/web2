@@ -1,0 +1,150 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+/* Add Styles Here */
+
+
+
+
+
+
+
+
+
+
+html { min-height:100%;
+	background: -webkit-linear-gradient(#574d94, #1b1835); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#574d94, #1b1835); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#574d94, #1b1835); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#574d94, #1b1835); /* Standard syntax */
+	font-family:Open Sans;
+	overflow-y:scroll; }
+
+
+#filter-bar-wrapper { padding-top:30px; }
+#topnav { width:80%; }
+
+#button-flter {
+	color: #70ced0; background-color: transparent; border:none;
+	font-size: 20px; float:left; }
+#button-menu {
+	color: #70ced0; background-color: transparent; border:none;
+	font-size: 20px; float:left; }
+#search {
+	background-color: #c0d4d3; border:none;
+	padding-right:30px; padding:6px; height:15px; width:140px; 
+	float: right; }
+#button-search {
+	color: #3b8e9c; background-color: transparent; border:none;
+	font-size: 20px; float: right; 
+	position:relative; left:100px; }
+
+
+#filter-bar { clear:both; }
+
+
+
+
+
+.collection { width:100%; }
+.collection div { width:25%; padding:0; margin:0; }	
+h2.name { padding:10px;
+	color: #d2ccf8; }
+.banner { width:100%; 
+	position:absolute;
+	left:0; top:0; }	
+.collection .cropit { width:100%; height:0;
+	position:relative; overflow:hidden; 
+	padding-top: 55%; }
+	
+
+	
+.modal img { height:70vh; float:left; }
+.modalwords { height:60vh; float:left;
+	padding-top:5vh; padding-left:20px; }
+h1 { font-size: 30px; font-weight: 600;
+	color: #1b1835;
+	padding-left:20px; clear:both; }
+.modalwords h1 {display:inline; }
+.title { padding:0; }
+.year {font-weight: 300; font-style: italic; 
+	padding-left:15px; }
+.dur { color: #1b1835; display:inline; padding-left: 20px;
+	font-weight: 400; font-style:italic; }
+.tag { color: #1b1835; 
+	padding-top: 10px; padding-bottom: 15px;  
+	font-weight:600; }
+.modal { width:100%; height:70vh; 
+	background-color: #d2ccf8; 
+	padding:0px; margin:0px; 
+	position:absolute;
+	top:15vh; overflow:hidden;
+	display:none; }
+	
+.description { padding:20px; width: 500px; }
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
