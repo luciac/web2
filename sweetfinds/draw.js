@@ -103,7 +103,7 @@ $("#dolladeact").on("click",function(e) {
 
 
 /*-------------------------------------------------------------------------
-----------------FILTER BUTTONS --------------------------------------------------------------------------*/
+----------------BOVAS BUTTONS --------------------------------------------------------------------------*/
 
 
 
@@ -127,6 +127,15 @@ $("#button-bovaabout").on("click",function(e) {
 	$("#videolinks").toggleClass("gone");
 	console.log("about is open");
 });
+
+$("#button-less").on("click",function(e) {
+	$(".lessbutton").toggleClass("gone");
+	$(".morebutton").toggleClass("gone");
+	$(".blackbox").toggleClass("gone");
+	$(".wordsbox").toggleClass("gone");
+	console.log("buttonless is done");
+});
+
 
 
 

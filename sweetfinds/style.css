@@ -60,7 +60,8 @@ table {
 
 body { overflow:hidden; background-color: #d0c0b2; 
 	font-family: helvetica; color:white; }
-button { background-color: transparent; border: 0; padding:0; margin:0; }
+button { background-color: transparent; border: 0; padding:0; margin:0;
+	outline: none; }
 
 
 #topnav { width:100%; height:50px; z-index:99;  
@@ -122,13 +123,13 @@ img.subtitle { height: 50px; padding:0; }
 
 	
 	
-#menumenu { height:100%; width: 0; transition: width 1.5s; 
-	position:absolute; top:0; right:0;
+#menumenu { height:100%; width: 25%;  
+	position:absolute; top:0; right:-25%; transition: right 1.5s;
 	background-image:red; overflow: hidden; }
 img.menubackground { position: absolute; right: -200px; height:200%;}
 
 
-#menumenu.open { width:25%; transition: width 1.5s; }
+#menumenu.open { right:0; transition: right 1.5s; }
 
 .list { z-index:50;
 	position:absolute; top: 75px; right: 50%; }
@@ -158,11 +159,16 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 	position: absolute; top:0; left:0; }
 .blackbox { width: 40%; height:60%; 
 	position:absolute; top:20%; left:20%;
-	background-color:black; opacity:.75; z-index:-8; }
+	background-color:black; z-index:-8;
+	opacity: .75; transition: opacity .25s;  }
 .wordsbox { width: 40%; height:60%; 
 	position:absolute; top:20%; left:20%;
-	z-index:-7;
-	line-height:19px; }
+	z-index:-7; line-height:19px; 
+	opacity: 1; transition: opacity .25s; }
+#button-less { position:absolute; top:22%; left: 55%; }
+.lessbutton { width: 30px; opacity: 1; transition: opacity .25s; }
+#button-more { position:absolute; top:22%; left: 55%; }
+.morebutton { width: 30px; opacity: 1; transition: opacity .25s; }
 .aboutbovasbox { padding-top:50px; padding-left:10px; width:90%; opacity:1; }
 .aboutblurb { width:70%; position:absolute; top:30%; left:10%;
 	padding:5%; font-size: 15px; opacity:1; }
@@ -179,10 +185,13 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 .lower.gone { display: none; }
 #panorama.gone  { opacity: 0; transition: opacity .25s; }
 #videolinks.gone { display: none; }
+
 #about.gone { display: none; }
 
-
-
+.morebutton.gone { opacity: 0; transition: opacity .25s; display:none; }
+.lessbutton.gone { opacity: 0; transition: opacity .25s; display:none; }
+.blackbox.gone { opacity: 0; transition: opacity .25s; }
+.wordsbox.gone { opacity: 0; transition: opacity .25s; }
 
 
 /*-------------------------------------------------------------------------
