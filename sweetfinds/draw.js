@@ -139,6 +139,21 @@ $("#button-less").on("click",function(e) {
 
 
 
+$("#button-bovamenu").on("click",function(e) {
+	$(".closebutton").toggleClass("gone");
+	$(".openbutton").toggleClass("gone");
+	$("#button-bovaabout").toggleClass("gone");
+	$("#button-bovagame").toggleClass("gone");
+	$(".lower").toggleClass("gone");
+	$("#panorama").toggleClass("gone");
+	$("#foodmenu").toggleClass("gone");
+	$("#menuitems").toggleClass("gone");
+	console.log("menu is open");
+});
+
+
+
+
 
 $(".brushsize").on("click",function(e) {
 	$(".brushsize").removeClass("selected");
@@ -147,3 +162,17 @@ $(".brushsize").on("click",function(e) {
 	lineWidth(size);
 });
 
+
+
+
+
+/*
+$(function(){
+    $('.fadein img:gt(0)').hide();
+    setInterval(function(){
+      $('.fadein :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('.fadein');}, 
+      3000);
+});
+*/

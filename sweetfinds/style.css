@@ -84,16 +84,23 @@ button { background-color: transparent; border: 0; padding:0; margin:0;
 
 	
 	
-#filtermenu { height:100%; width: 0; transition: width 1.5s; 
+#filtermenu { height:100%; z-index: 30; width: 0; transition: width 1.5s; 
 	position:absolute; top:0; right:0;
 	background-image:red; overflow: hidden; }
 img.menubackground { position: absolute; right: -200px; height:200%;}
 
 
+
 #filtermenu.open { width:25%; transition: width 1.5s; }
 
-.filterbuttons { z-index:50; width: 25%;
-	position:absolute; top: 65px; right: 70%; }
+.filterbuttons { z-index:50; width: 80%; height: 80vh;
+	position:absolute; top: 65px; left:10%;
+	overflow-y: scroll; overflow-x:hidden;  }
+.filterbuttons::-webkit-scrollbar { background-color: #3d3d3d; opacity;.5;
+	width:10px; }
+.filterbuttons::-webkit-scrollbar-thumb { background-color:white; opacity:.5;}
+
+
 .filters { background-color: transparent; border: 0; padding:0; }
 .filtersoff { background-color: transparent; border: 0; padding:0; }
 .filters img { height:70px; padding: 0; 
@@ -123,10 +130,16 @@ img.subtitle { height: 50px; padding:0; }
 
 	
 	
-#menumenu { height:100%; width: 25%;  
+#menumenu { height:100%; width: 25%;  z-index:40;
 	position:absolute; top:0; right:-25%; transition: right 1.5s;
-	background-image:red; overflow: hidden; }
+	background-image:red; overflow:hidden; }
 img.menubackground { position: absolute; right: -200px; height:200%;}
+
+.bovasmain { height: 75vh; overflow-y: scroll; overflow-x:hidden; }
+.bovasmain::-webkit-scrollbar { background-color: #3d3d3d; opacity;.25;
+	width:10px; }
+.bovasmain::-webkit-scrollbar-thumb { background-color:white; opacity:.5;}
+
 
 
 #menumenu.open { right:0; transition: right 1.5s; }
@@ -139,8 +152,11 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 
 /*---------------------------separeate page--------------------*/
 .bovasmain { z-index:50; width:80%;
-	position:absolute; top: 75px; right: 10%; }
-.bovaslogo { width: 100%; margin-left:auto; margin-right:auto;
+	position:absolute; top: 190px; left: 10%;
+	padding-right:20px; }
+.bovaslogo { width: 20vw;
+	position:absolute; top: 60px; right: 3%;
+	z-index: 99; 
 	padding-bottom: 26px; }
 
 .bovasmain h1 { font-size:22px; font-weight: bold; padding-bottom:5px; }
@@ -172,14 +188,28 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 .aboutbovasbox { padding-top:50px; padding-left:10px; width:90%; opacity:1; }
 .aboutblurb { width:70%; position:absolute; top:30%; left:10%;
 	padding:5%; font-size: 15px; opacity:1; }
-#videolinks { }
+#videolinks { padding-top: 15px; }
 #videolinks h1 { font-size:15px; padding-bottom: 30px; }
 #videolinks a { padding: 0; padding-bottom:25px; margin: 0; }
+
+
+
+
+/*--------------------menuitems---------------*/
+#menuitems { padding-top: 15px; }
+.food { float: left; width: 60%; }
+.price { float: right; width: 37px; }
+
+
+
+
+
 
 
 /*=====================toggle=================*/
 .closebutton.gone { display:none; }
 .openbutton.gone { display:none; }
+#button-bovaabout.gone { display: none; }
 #button-bovamenu.gone { display: none; }
 #button-bovagame.gone { display: none; }
 .lower.gone { display: none; }
@@ -192,6 +222,9 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 .lessbutton.gone { opacity: 0; transition: opacity .25s; display:none; }
 .blackbox.gone { opacity: 0; transition: opacity .25s; }
 .wordsbox.gone { opacity: 0; transition: opacity .25s; }
+
+#menuitems.gone { display: none; }
+#foodmenu.gone { display: none; }
 
 
 /*-------------------------------------------------------------------------
@@ -261,3 +294,72 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 .right.open { height: 50px;  
 	position: absolute; top: 50%; right:25%; transition: right 1.5s;
 	padding-right: 20px; padding-top: 10px; }
+	
+	
+	
+	
+	
+	
+
+
+
+
+/*-------------------------------------------------------------------------
+---------------- MENU FOOD --------------------------------------------------------------------------*/
+/*
+.fadein { position:relative; width:100%; height:100% }
+.fadein img { max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0; }
+	*/
+
+.cb-slideshow,
+.cb-slideshow:after { position: fixed;
+	width: 100%; height: 100%;
+    top: 0px; left: 0px; z-index: 10; }
+	
+.cb-slideshow li span { width: 100%; height: 100%;
+	position: absolute; top: 0px; left: 0px;
+	color: transparent; background-size: cover;
+	background-position: 50% 50%; opacity: 0; z-index: 10;
+	-webkit-animation: imageAnimation 36s linear infinite 0s; }
+	
+.cb-slideshow li:nth-child(1) span { 
+	background-image: url(images/foods.jpg) }
+
+.cb-slideshow li:nth-child(2) span { 
+	background-image: url(images/canoli.jpg);
+    -webkit-animation-delay: 6s; }
+.cb-slideshow li:nth-child(3) span { 
+	background-image: url(images/boxofood.jpg);
+    -webkit-animation-delay: 12s; }
+.cb-slideshow li:nth-child(4) span { 
+	background-image: url(images/dunkin.jpg);
+    -webkit-animation-delay: 18s; }
+.cb-slideshow li:nth-child(5) span { 
+	background-image: url(images/lobstah.jpg);
+    -webkit-animation-delay: 24s; }
+.cb-slideshow li:nth-child(6) span { 
+	background-image: url(images/colours.jpg);
+    -webkit-animation-delay: 30s; }
+
+.cb-slideshow li:nth-child(2) div { -webkit-animation-delay: 6s; }
+.cb-slideshow li:nth-child(3) div { -webkit-animation-delay: 12s; }
+.cb-slideshow li:nth-child(4) div { -webkit-animation-delay: 18s; }
+.cb-slideshow li:nth-child(5) div { -webkit-animation-delay: 24s; }
+.cb-slideshow li:nth-child(6) div { -webkit-animation-delay: 30s; }
+
+@-webkit-keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 } }
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1; }
