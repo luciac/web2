@@ -126,7 +126,8 @@ function hideModal() {
 
 function addItem(item) {
   var $li = $("<div>").addClass("item").addClass(item.rating);
-  var $contain = $("<div class='cropit'>")
+  var $contain = $("<div class='cropit'>");
+  var $mod = $("<div class='modal'>");
   $li.attr("data-rating",item.rating);
   $li.attr("data-genre",item.genre);
   $li.attr("data-writer",item.writer);
@@ -140,6 +141,7 @@ function addItem(item) {
   $li.on("click",function(e) {
       showModal(item);
   });
+
   $(".collection").append($li);
 };
 
@@ -220,7 +222,9 @@ $("#button-flter").on("click",function(e) {
 	$(".collection").toggleClass("menuopen");
 	});
 
-
+$(".modal").on("click",function(e) {
+	$(this).addClass("gone");
+	});
 </script>
 	
 </body>

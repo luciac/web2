@@ -210,7 +210,7 @@ h1 { font-size: 30px; font-weight: 600;
 	display:none; }
 	
 .description { padding:20px; width: 500px; }
-
+.modal.gone { display:none; }
 
 
 
