@@ -59,7 +59,7 @@ table {
 
 
 body { overflow:hidden; background-color: #d0c0b2; 
-	font-family: helvetica; color:white; }
+	font-family: Cabin; color:white; }
 button { background-color: transparent; border: 0; padding:0; margin:0;
 	outline: none; }
 
@@ -135,10 +135,6 @@ img.subtitle { height: 50px; padding:0; }
 	background-image:red; overflow:hidden; }
 img.menubackground { position: absolute; right: -200px; height:200%;}
 
-.bovasmain { height: 75vh; overflow-y: scroll; overflow-x:hidden; }
-.bovasmain::-webkit-scrollbar { background-color: #3d3d3d; opacity;.25;
-	width:10px; }
-.bovasmain::-webkit-scrollbar-thumb { background-color:white; opacity:.5;}
 
 
 
@@ -152,7 +148,7 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 
 /*---------------------------separeate page--------------------*/
 .bovasmain { z-index:50; width:80%;
-	position:absolute; top: 190px; left: 10%;
+	position:absolute; top: 230px; left: 10%;
 	padding-right:20px; }
 .bovaslogo { width: 20vw;
 	position:absolute; top: 60px; right: 3%;
@@ -179,8 +175,9 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 	opacity: .75; transition: opacity .25s;  }
 .wordsbox { width: 40%; height:60%; 
 	position:absolute; top:20%; left:20%;
-	z-index:-7; line-height:19px; 
-	opacity: 1; transition: opacity .25s; }
+	z-index:-7; line-height:22px; 
+	opacity: 1; transition: opacity .25s;
+	font-size:16px; }
 #button-less { position:absolute; top:22%; left: 55%; }
 .lessbutton { width: 30px; opacity: 1; transition: opacity .25s; }
 #button-more { position:absolute; top:22%; left: 55%; }
@@ -197,8 +194,9 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 
 /*--------------------menuitems---------------*/
 #menuitems { padding-top: 15px; }
+#menuitems h1 { float:left; width: 100%; padding-bottom: 10px; }
 .food { float: left; width: 60%; }
-.price { float: right; width: 37px; }
+.price { float: right; width: 37px; padding-right:10px; }
 
 
 
@@ -363,3 +361,26 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
     100% { opacity: 0 } }
 .no-cssanimations .cb-slideshow li span{
 	opacity: 1; }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+#menuitems { height: 45vh; overflow-y: scroll; overflow-x:hidden; }
+#menuitems::-webkit-scrollbar { background-color: #3d3d3d; opacity;.25;
+	width:10px; }
+#menuitems::-webkit-scrollbar-thumb { background-color:white; opacity:.5;}

@@ -72,32 +72,94 @@ html { min-height:100%;
 	overflow-y:scroll; }
 
 
-#filter-bar-wrapper { padding-top:30px; }
+#filter-bar-wrapper { padding-top:20px; height: 5f0px; }
 #topnav { width:80%; }
 
 #button-flter {
 	color: #70ced0; background-color: transparent; border:none;
-	font-size: 20px; float:left; }
+	font-size: 25px; float: right; z-index: 99;
+	position: absolute; right: 20%; }
 #button-menu {
 	color: #70ced0; background-color: transparent; border:none;
-	font-size: 20px; float:left; }
+	font-size: 25px; float:left; position: absolute; left: 20px; }
 #search {
 	background-color: #c0d4d3; border:none;
-	padding-right:30px; padding:6px; height:15px; width:140px; 
-	float: right; }
+	padding: 6px; height: 15px; width: 160px; 
+	float: right;
+	position: absolute; right: 20px; }
 #button-search {
 	color: #3b8e9c; background-color: transparent; border:none;
-	font-size: 20px; float: right; 
-	position:relative; left:100px; }
+	font-size: 25px; clear: both; 
+	position: absolute; right: 25px; }
 
 
-#filter-bar { clear:both; }
+#filter-bar { clear:both; display: none; }
 
 
 
 
+.pushitdown { position: absolute; top: 50px; }
+#filtermenu { width: 25%; height: 100%;
+	position: fixed; top: 0; right: -25%; z-index: 90;
+	background: -webkit-linear-gradient(#296b79, #0e3039); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#296b79, #0e3039); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#296b79, #0e3039); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#296b79, #0e3039); /* Standard syntax */ }
+#filtermenu h1 { color: #c0d4d3; font-size: 15px;
+	width: 40px; padding: 6px; height: 15px; padding-left:20px; 
+	margin: 0; float: left; font-weight: 300; 
+	margin-top: 15px; }
+#cast { color: #c0d4d3; font-size: 12px;
+	background-color: #3b8e9c; border:none;
+	padding: 6px; height: 15px; width: 160px; 
+	float: right; margin-top: 15px; margin-right: 20px; }
+#director { color: #c0d4d3; font-size: 12px;
+	background-color: #3b8e9c; border:none;
+	padding: 6px; height: 15px; width: 160px; 
+	float: right; margin-top: 15px; margin-right: 20px; }
+#writer { color: #c0d4d3; font-size: 12px;
+	background-color: #3b8e9c; border:none;
+	padding: 6px; height: 15px; width: 160px; 
+	float: right; margin-top: 15px; margin-right: 20px; }
+button.rating {
+	color: #1c626c; font-size: 16px; 
+	background-color: #3b8e9c; border:none;
+	height: 27px; width: 172px; 
+	float: right; margin-top: 5px; margin-right: 20px; }
+button.five { margin-top: 15px; }
 
-.collection { width:100%; }
+
+
+
+button.rating.selected {
+	color: #c0d4d3; }
+
+
+
+
+#filtermenu.open { right: 0; } 
+
+
+
+
+#genre { color: #c0d4d3; font-size: 12px;
+	background-color: #3b8e9c; border:none;
+	padding: 6px; height: 15px; width: 83%; height: 95px; 
+	float: right; margin-top: 5px; margin-right: 20px; }
+#genre button { color: #c0d4d3; font-size: 15px; font-weight: 300;
+	background-color: transparent; width:auto; margin: 2px;
+	padding: 3px; padding-left: 7px;  padding-bottom: 5px;
+	float:left; padding-right: 7px; border: 0; }
+#genre.selected button { color: #c0d4d3; font-size: 15px; font-weight: 300;
+	background-color: #1c626c; width:auto; margin: 2px;
+	padding: 3px; padding-left: 7px;  padding-bottom: 5px;
+	float:left; padding-right: 7px; border: 0;  }
+
+
+
+
+.collection { width:100%;
+	position: absoulte; top: 50px; }
 .collection div { width:25%; padding:0; margin:0; }	
 h2.name { padding:10px;
 	color: #d2ccf8; }
@@ -107,6 +169,21 @@ h2.name { padding:10px;
 .collection .cropit { width:100%; height:0;
 	position:relative; overflow:hidden; 
 	padding-top: 55%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 
 	

@@ -31,17 +31,50 @@
 		<button id='button-search'><span class="fa fa-search"></span></button>
 	</div> <!-- END TOP NAV-->
   <div id='filter-bar'>
-    <button data-rating=""      class='rating selected' id="all-button">All</button>
-    <button data-rating="5"  class='rating'>5 star</button>
-    <button data-rating="4"   class='rating'>4 star</button>
+    <button data-rating="" class='rating selected' id="all-button">All</button>
+    <button data-rating="5" class='rating'>5 star</button>
+    <button data-rating="4" class='rating'>4 star</button>
   </div>
 </div>
 
-<div class='collection'>
- 
 
+<div id="filtermenu"> <div class="pushitdown">
+	    <h1 class="cast">Cast</h1> <input type='text' id='cast' placeholder=' '/>
+	    <h1 class="director">Director</h1> <input type='text' id='director' placeholder=' '/>
+	    <h1 class="writer">Writer</h1> <input type='text' id='writer' placeholder=' '/>
+		<h1 class="rating">Rating</h1> <button data-rating="5"  class='rating five'>
+			<span class='fa fa-star'> 
+			<span class='fa fa-star'> 
+			<span class='fa fa-star'> 
+			<span class='fa fa-star'> 
+			<span class='fa fa-star'></button>
+		<button data-rating="4" class='rating'>
+			<span class='fa fa-star'> 
+			<span class='fa fa-star'> 
+			<span class='fa fa-star'> 
+			<span class='fa fa-star'> 
+			<span class="fa fa-star-o"></button>
+		<button data-rating="" class='rating selected' id="all-button">All</button>
+		<h1>Genre</h1><input type='text' id='writer' placeholder=' '/>
+		<div id="genre">
+			<button data-genre="Comedy" class='genres'>Comedy</button>
+			<button data-genre="Drama" class='genres'>Drama</button>
+			<button data-genre="Documentary" class='genres'>Documentary</button>
+			<button data-genre="Fantasy" class='genres'>Fantasy</button>
+			<button data-genre="Family" class='genres'>Family</button>
+			<button data-genre="Sci-Fi" class='genres'>Sci-Fi</button>
+			<button data-genre="Teen" class='genres'>Teen</button>
+			<button data-genre="Reality" class='genres'>Reality</button>
 
+		</div></div>
 </div>
+
+
+
+<div class='collection'>
+</div>
+
+
 
 <div class='overlay'></div>
 <div class='modal'></div>
@@ -66,6 +99,7 @@ function showModal(item) {
    var $h1 = $("<h1 class='title'>").text(item.name);
    var $year = $("<h1 class='year'>").text(item.year);
    var $dur = $("<h2 class='dur'>").text(item.durration + " minutes");
+   var $genre = $("<h2 class='genre'>").text(item.genre);
    var $tag = $("<h2 class='tag'>").text(item.tagline);
   <!-- var $rating = $-->
    var $mood = $("<h3 class='mood'>").text(item.tags);
@@ -76,7 +110,7 @@ function showModal(item) {
    var $img = $("<img>").attr("src",item.posterimg);
    var $p = $("<p class='description'>").text(item.description);
    
-   $div.append($h1,$year,$dur,$tag,$mood);
+   $div.append($h1,$year,$dur,$tag,$genre,$mood);
    showRating(item,$div);
    $(".modal").append($img,$div);
    $(".overlay").show();
@@ -94,6 +128,10 @@ function addItem(item) {
   var $li = $("<div>").addClass("item").addClass(item.rating);
   var $contain = $("<div class='cropit'>")
   $li.attr("data-rating",item.rating);
+  $li.attr("data-genre",item.genre);
+  $li.attr("data-writer",item.writer);
+  $li.attr("data-director",item.director);
+  $li.attr("data-cast",item.cast);
   var $h2 = $("<h2 class='name'>").text(item.name);
   var $img = $("<img class='banner'>").attr("src",item.bannerimg);
 
@@ -122,7 +160,11 @@ function callback(data) {
   var myCollection = $(".item").collection({
     filters: { 
       "title": "h2",
-      "rating": "[data-rating]" },
+      "rating": "[data-rating]",
+	  "genre": "[data-genre]",
+	  "cast": "[data-cast]", 
+	  "director":"[data-director]",
+	  "writer":"[data-writer]" },
 
     update: function() { 
       $container.packery(); 
@@ -133,15 +175,35 @@ function callback(data) {
 
   $(".rating").on("click",function(e) {
       var rating = $(this).data("rating");
-      $("#filter-bar button").removeClass("selected");
+      $("button.rating").removeClass("selected");
       $(this).addClass("selected");
       myCollection.filtered("rating",rating);
   });
 
+ $("#genre button").on("click",function(e) {
+      var genre = $(this).data("genre");
+      $(this).addClass("selected");
+      $("#filter-bar button").toggleClass("selected");
+      myCollection.filtered("genre",genre);
+  });
+
+
+
+
   $("#search").on("change keyup",function(e) {
       myCollection.filtered("title", $(this).val());
   });
-
+  
+  $("#cast").on("change keyup",function(e) {
+      myCollection.filtered("cast", $(this).val());
+  });
+    $("#director").on("change keyup",function(e) {
+      myCollection.filtered("director", $(this).val());
+  });
+    $("#writer").on("change keyup",function(e) {
+      myCollection.filtered("writer", $(this).val());
+  });
+  
   $(".overlay").on("click",function(e) {
       hideModal();
   });
@@ -152,6 +214,11 @@ function callback(data) {
   Tabletop.init( { key: "https://docs.google.com/spreadsheets/d/1QscbX7H5HDUSQY37Yv_Sq4r8Ih1-yq2tnbe4bOXJ5Es/pubhtml",
                    callback: callback,
                    simpleSheet: true } )
+
+$("#button-flter").on("click",function(e) {
+	$("#filtermenu").toggleClass("open");
+	$(".collection").toggleClass("menuopen");
+	});
 
 
 </script>
