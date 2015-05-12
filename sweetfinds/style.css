@@ -426,4 +426,10 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 {
 	.bovaslogo { width: 15vw; right: 6%;}
 	.nemap {  height: 100%; width: auto; }
+	img.filtertitle { height: 120px; display: block; padding-bottom: 40px;}
+	.filters img { height: 90px; padding-right: 20%; }
+	.filtersoff img { height: 90px; padding-right: 20%; }
+	img.subtitle { height: 70px; }
+
 }
+
