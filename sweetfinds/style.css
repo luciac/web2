@@ -76,6 +76,10 @@ button { background-color: transparent; border: 0; padding:0; margin:0;
 #button-close { float: right; font-size: 25px; 
 	background-color: transparent; color: white; border: 0;
 	padding-right: 20px; padding-top: 10px; display: none; }
+.home { float: left; font-size: 25px; width: 20px;
+	background-color: transparent; color: white; border: 0;
+	padding-right: 0; padding-top: 10px; }
+.sflogo { height: 45px; margin-left: 43%; margin-right:0; }
 
 
 
@@ -141,7 +145,12 @@ img.menubackground { position: absolute; right: -200px; height:200%;}
 #menumenu.open { right:0; transition: right 1.5s; }
 
 .list { z-index:50;
-	position:absolute; top: 75px; right: 50%; }
+	position:absolute; top: 75px; 
+	width: 90%; height: 85vh;
+	overflow-y: scroll; overflow-x:hidden;  }
+.list::-webkit-scrollbar { background-color: #3d3d3d; opacity;.5;
+	width:10px; }
+.list::-webkit-scrollbar-thumb { background-color:white; opacity:.5;}
 
 a { text-decoration:none; font-family: helvetica; color:white; padding:15px; padding-left: 30px; width: 100%; float:left; }
 
@@ -194,7 +203,10 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 
 /*--------------------menuitems---------------*/
 #menuitems { padding-top: 15px; }
-#menuitems h1 { float:left; width: 100%; padding-bottom: 10px; }
+#menuitems h1 { float: left;
+	width: 100%;
+	padding-bottom: 10px;
+	padding-top: 20px; }
 .food { float: left; width: 60%; }
 .price { float: right; width: 37px; padding-right:10px; }
 
@@ -252,9 +264,11 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 .nemap.zoomout { width: 100%; transition: width .75s; 
 	 top: 0; left: 0; }
 	 
-	 
-	 
-
+.bubblelink { width:20px; height: 20px; 
+	position: absolute; top:260px; left: 220px;}	 
+.bubblelink img { height: 200px; position: absolute;
+	top: -160px; left:-5px; }	 
+.bubble.gone { display:none; }
 
 
 

@@ -155,12 +155,46 @@ $("#button-bovamenu").on("click",function(e) {
 
 
 
+
+
+
+$(".bubblelink").hover(function(e) {
+	$(".bubble").toggleClass("gone");
+	});
+$(".bubblelink").on("click",function(e) {
+	window.location.href = "http://luciac.github.io/web2/sweetfinds/bovas";
+	});
+$(".bubble").on("click",function(e) {
+	window.location.href = "http://luciac.github.io/web2/sweetfinds/bovas";
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(".brushsize").on("click",function(e) {
 	$(".brushsize").removeClass("selected");
 	$(this).addClass("selected");
 	var size =$(this).data("width");
 	lineWidth(size);
 });
+
+
+
+
+
+
+
+
+
 
 
 
