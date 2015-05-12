@@ -180,6 +180,20 @@ $(".bubble").on("click",function(e) {
 
 
 
+$("#videolinks button").on("click",function(e) {
+	$("#interview").toggleClass("gone");
+	$(this).toggleClass("selected");
+	$("#about").toggleClass("gone");
+});
+
+
+
+
+
+
+
+
+
 $(".brushsize").on("click",function(e) {
 	$(".brushsize").removeClass("selected");
 	$(this).addClass("selected");

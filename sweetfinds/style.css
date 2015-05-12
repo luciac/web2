@@ -196,8 +196,10 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 	padding:5%; font-size: 15px; opacity:1; }
 #videolinks { padding-top: 15px; }
 #videolinks h1 { font-size:15px; padding-bottom: 30px; }
-#videolinks a { padding: 0; padding-bottom:25px; margin: 0; }
+#videolinks button { padding: 0; padding-bottom:25px; margin: 0;
+	 text-decoration:none; font-family: Cabin; color:white; padding:15px; padding-left: 0; font-size:15px; }
 
+#videolinks button.selected { color:gold; }
 
 
 
@@ -407,8 +409,8 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 
 
 
-
-
+#interview { z-index:80; height:100vh; }
+#interview.gone {display:none;}
 
 
 
