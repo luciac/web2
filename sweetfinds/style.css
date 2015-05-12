@@ -152,7 +152,7 @@ img.menubackground { position: absolute; right: -200px; height:200%;}
 	width:10px; }
 .list::-webkit-scrollbar-thumb { background-color:white; opacity:.5;}
 
-a { text-decoration:none; font-family: Cabin; color:white; padding:15px; padding-left: 30px; width: 100%; float:left; }
+a { text-decoration:none; font-family: cabin; color:white; padding:15px; padding-left: 30px; width: 100%; float:left; }
 
 
 /*---------------------------separeate page--------------------*/
