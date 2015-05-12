@@ -432,6 +432,7 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 	.filters img { height: 80px; padding-right: 20%; }
 	.filtersoff img { height: 80px; padding-right: 20%; }
 	img.subtitle { height: 55px; }
+	#videolinks button { display:block; }
 
 }
 
