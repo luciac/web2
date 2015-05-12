@@ -398,3 +398,31 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 #menuitems::-webkit-scrollbar { background-color: #3d3d3d; opacity;.25;
 	width:10px; }
 #menuitems::-webkit-scrollbar-thumb { background-color:white; opacity:.5;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1700px)
+{
+	.bovaslogo { width: 15vw; right: 6%;}
+}
