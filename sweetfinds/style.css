@@ -425,7 +425,7 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 @media screen and (min-width:1700px)
 {
 	.bovaslogo { width: 15vw; right: 6%;}
-	.nemap {  height: 100%; width: auto; }
+	.nemap {  max-height: 100%; }
 	img.filtertitle { height: 120px; display: block; padding-bottom: 40px;}
 	.filters img { height: 80px; padding-right: 20%; }
 	.filtersoff img { height: 80px; padding-right: 20%; }
