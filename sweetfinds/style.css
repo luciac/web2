@@ -425,4 +425,5 @@ a { text-decoration:none; font-family: helvetica; color:white; padding:15px; pad
 @media screen and (min-width:1700px)
 {
 	.bovaslogo { width: 15vw; right: 6%;}
+	.nemap {  height: 100%; width: auto; }
 }
