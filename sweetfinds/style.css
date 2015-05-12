@@ -433,12 +433,12 @@ a { text-decoration:none; font-family: cabin; color:white; padding:15px; padding
 	.filters img { height: 80px; padding-right: 20%; padding-top:10px; }
 	.filtersoff img { height: 80px; padding-right: 20%; padding-top:10px; }
 	img.subtitle { height: 55px; }
-	#videolinks button { display:block; width:100%; }
+	#videolinks button { display:block; }
 
 }
 @media screen and (min-width:1000px)
 {
-	#videolinks button { display:block; width:100%; }
+	#videolinks button { display:block; }
 
 }
 
