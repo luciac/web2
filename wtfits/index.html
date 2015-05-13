@@ -95,6 +95,7 @@ function showRating(item,$div) {
 
 function showModal(item) {
    $(".modal").empty();
+   var $close = $("<button id='closebutton'><span class='fa fa-times-circle'></span></button>");
    var $div = $("<div class='modalwords'>");
    var $h1 = $("<h1 class='title'>").text(item.name);
    var $year = $("<h1 class='year'>").text(item.year);
@@ -112,7 +113,7 @@ function showModal(item) {
    
    $div.append($h1,$year,$dur,$tag,$genre,$mood);
    showRating(item,$div);
-   $(".modal").append($img,$div);
+   $(".modal").append($close,$img,$div);
    $(".overlay").show();
    $(".modal").show(); }
 
@@ -128,6 +129,7 @@ function addItem(item) {
   var $li = $("<div>").addClass("item").addClass(item.rating);
   var $contain = $("<div class='cropit'>");
   var $mod = $("<div class='modal'>");
+  var $closer = $("<button id='closebutton'>");
   $li.attr("data-rating",item.rating);
   $li.attr("data-genre",item.genre);
   $li.attr("data-writer",item.writer);
@@ -139,7 +141,9 @@ function addItem(item) {
   $contain.append($img)
   $li.append($contain).append($h2);
   $li.on("click",function(e) {
-      showModal(item);
+      showModal(item); });
+	$closer.on("click",function(e) {
+		$(".modal").hide();
   });
 
   $(".collection").append($li);
@@ -222,9 +226,10 @@ $("#button-flter").on("click",function(e) {
 	$(".collection").toggleClass("menuopen");
 	});
 
-$(".modal").on("click",function(e) {
-	$(this).addClass("gone");
-	});
+
+
+
+	
 </script>
 	
 </body>

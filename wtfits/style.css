@@ -184,7 +184,7 @@ h2.name { padding:10px;
 
 
 
-	
+.modal.gone { display:none; }
 
 	
 .modal img { height:70vh; float:left; }
@@ -210,13 +210,16 @@ h1 { font-size: 30px; font-weight: 600;
 	display:none; }
 	
 .description { padding:20px; width: 500px; }
-.modal.gone { display:none; }
 
 
 
 	
 
 
+
+.modal button {
+	color: #3b8e9c; background-color: transparent; border:none;
+	font-size: 25px; position: absolute; top: 15px; right: 20px; }
 
 
 
