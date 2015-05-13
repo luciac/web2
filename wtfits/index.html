@@ -143,7 +143,7 @@ function addItem(item) {
   $li.on("click",function(e) {
       showModal(item); });
 	$closer.on("click",function(e) {
-		$(".modal").hide();
+		hideModal(item);
   });
 
   $(".collection").append($li);
