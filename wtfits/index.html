@@ -85,7 +85,7 @@ function showRating(item,$div) {
 	var $stars = $("<div class='ratingg'>");
 	var rating = parseInt(item.rating,10); 
 	for (var i=0; i < rating; i++) {
-		var $astar = $("<span class='fa fa-star'>");
+		var $astar = $("<span class='fa fa-star'></span>");
 		$stars.append($astar);
 		}
 	$div.append($stars);
