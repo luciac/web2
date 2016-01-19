@@ -271,7 +271,7 @@ h2 { font-size: 50px;
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: 1; 
   -webkit-animation-fill-mode: forwards; }
-.claudmoves { -webkit-animation-name: claudmove;
+.claudmoves { -webkit-animation-name: claudmove; /*its up in the secret section*/
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards; }
