@@ -1,0 +1,205 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input, button, submit
+	{ border:none; }
+button { outline: none; }
+
+
+
+
+
+
+/* Add Styles Here */
+
+body { overflow: hidden; }
+
+
+
+
+#trigger { width: 100px; height: 100px;
+	position: absolute; top: 10px; left: 10px; z-index: 99; }
+
+#darkness { width: 100vw; height: 100vh;
+	position: absolute; top: 0; left: 0;
+	z-index: -99;
+	background-color: black; }
+
+
+/*---------------------------------------------------------------------
+-----------------------------------------------------------------------
+-------------------------------HOMEPAGE--------------------------------
+-----------------------------------------------------------------------
+---------------------------------------------------------------------*/
+#homepage { overflow: hidden; left: 0; top: 0; position: absolute;
+	z-index: 99; opacity: 1;
+	height: 100vh; width: 100vw; 
+	-webkit-transition: all 3s ease-in;
+	-webkit-transition-delay: .5s; }
+
+.background { position: absolute; top: 0; left: 0; z-index: -3; }
+
+#darken { background-color: black; opacity: .65; 
+	width: 100vw; height: 100vh;
+	position: absolute; top: 0; left: 0; z-index: -1; }
+
+#gradienta { position: absolute; top: 0; right: 0; 
+	height: 100vh; width: 75vw; z-index: -1;
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.8)); }
+
+
+
+
+
+h1 { width: 35%; padding-right: 5%; padding-left: 10%;
+	color: white;
+	font-family: Playfair Display; font-weight: 700; font-size: 55px;
+	position: relative; top: -10vh; left: 0; z-index: 3; float: left;
+	text-shadow: 0px 0px 15px black; opacity: 0;
+	-webkit-transition: all 4s ease-out;
+	-webkit-transition-delay: 1.5s; }
+
+
+
+.hand { width: 40%; position: absolute; float: left;
+	z-index: 1; left: 20px; bottom: -70vh; 
+	-webkit-transition: all 4s ease-out;
+	-webkit-transition-delay: .75s; }
+
+
+.right { width: 35%; padding-left: 5%; padding-right: 10%;
+	float: right; position: relative; right: 0;
+	top: 50%; transform: translateY(-50%);
+	opacity: 0;
+	-webkit-transition: all 4s ease-out;
+	-webkit-transition-delay: 6s; }
+
+p { /*clear: both;*/
+	font-family: Belleza; font-size: 17px; color: white; 
+	line-height: 1.5em; text-shadow: 0px 0px 15px black;
+	width: 90%; position: relative; left: 50%; transform: translateX(-50%);
+	padding-bottom: 55px; }
+
+.TOCtoggle { font-family: Playfair Display; font-weight: 700; color: white;
+	font-size: 25px; background: none; border: 3px solid white; 
+	padding: 5px; padding-left: 30px; padding-right: 30px; 
+	text-shadow: 0px 0px 15px black;
+	position: relative; left: 50%; transform: translateX(-50%);
+	-webkit-transition: all 5s ease-out;  }
+
+
+.TOCtoggle:hover { color: #602020; border-color: #602020;
+	background-color: rgba(0,0,0,.65);
+	-webkit-transition: all 2s ease-out; }
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------
+-----------------------------------------------------------------------
+----------------------------------TOC----------------------------------
+-----------------------------------------------------------------------
+---------------------------------------------------------------------*/
+
+
+#TOC { width: 100vw; height: 100vh; z-index: 1;
+	opacity: 0;
+	-webkit-transition: all 4.5s ease-out;
+	-webkit-transition-delay: 2.5s; }
+
+.tables li { width: 20vw; height: 50vh; float: left;
+	background-size: cover; background-color: orange;
+	background-position: 50% 50%; }
+
+.tables a { position: absolute; width: 20vw; height: 50vh; z-index: 99;
+	clear: both; }
+
+.tables li:nth-child(1) { 
+	background-image: url(images/TOC-01.jpg); }
+.tables li:nth-child(2) { 
+	background-image: url(images/TOC-02.jpg); }
+.tables li:nth-child(3) { 
+	background-image: url(images/TOC-03.jpg); }
+.tables li:nth-child(4) { 
+	background-image: url(images/TOC-04.jpg); }
+.tables li:nth-child(5) { 
+	background-image: url(images/TOC-05.jpg); }
+.tables li:nth-child(6) { 
+	background-image: url(images/TOC-06.jpg); }
+.tables li:nth-child(7) { 
+	background-image: url(images/TOC-07.png); }
+.tables li:nth-child(8) { 
+	background-image: url(images/TOC-08.jpg); }
+.tables li:nth-child(9) { 
+	background-image: url(images/TOC-09.jpg); }
+.tables li:nth-child(10) { 
+	background-image: url(images/TOC-10.jpg); }
+
+
+.tables .number { position: relative; height: 55%;
+	top: 25%; transform: translateY(-13%);
+	left: 50%; transform: translateX(-50%); }
+
+
+
+
+
+/*---------------------------------------------------------------------
+------------------------------ANIMATION--------------------------------
+---------------------------------------------------------------------*/
+
+.hand.riseup { bottom: -10vh; }
+.welcometitle.riseup { top: 30vh; opacity: 1; }
+.right.fadein { opacity: 1; }
+#homepage.fadeout { opacity: 0; z-index: 1; }
+#TOC.fadein { opacity: 1; }
