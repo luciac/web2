@@ -163,7 +163,7 @@ p { /*clear: both;*/
 
 .rediv { width: 90%; height: 100%;
 	z-index: 99; position: relative; top: 0; left: 0; float: left;
-	background-color: red; }	
+	background-color: red; display: none; }	
 
 
 .tables li:nth-child(1) { 
