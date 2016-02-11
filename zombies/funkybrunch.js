@@ -11,7 +11,7 @@ $(".scrolling").on("arrived",function(e) {
 */
 
 $("#trigger").on("arrived",function(e) {
-	$(".hand").addClass("riseup");
+	$(".hand").addClass("slideinleft");
 	$(".welcometitle").addClass("riseup");
 	$(".right").addClass("fadein");
 });
@@ -23,11 +23,7 @@ $(".TOCtoggle").on("click",function(e) {
 });
 
 
-$(".TOCbtn").hover(
-	function() {
-		$(".rediv").addClass("on");
-		$(".TOCbtn").addClass("zoomin");
-	});
+
 
 
 $("#dacat").hover(

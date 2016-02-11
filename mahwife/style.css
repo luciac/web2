@@ -1,0 +1,34 @@
+p { width:150px;
+	border-radius:15px;
+	padding:9px;
+	padding-bottom:6px;
+	padding-left:10px;
+	font-family:helvetica;
+	line-height:16px;
+	font-size:13px; }
+
+.me {background-color: #4CD964;
+	position:relative;
+	right:-100px;
+	color:white; }
+
+
+.blue {background-color: #007AFF;}
+
+.wife {background-color: #D7D7D7;
+ 	margin-left:0;
+    color:balck; }
+	
+img { width:169px;
+	border-radius:15px; 
+	display:block; 
+	position:relative;
+	right:-100px;
+	padding-top:5px; 
+	padding-bottom:5px; }
+
+img.lady {position:relative;
+	right:0; }
+
+
+.goodgifs {display:none; }

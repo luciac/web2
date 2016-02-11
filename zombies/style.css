@@ -161,8 +161,10 @@ p { /*clear: both;*/
 	background-size: cover; background-color: orange;
 	background-position: 50% 50%; }
 
-.tables a { position: absolute; width: 20vw; height: 50vh; z-index: 99;
-	clear: both; }
+.rediv { width: 90%; height: 100%;
+	z-index: 99; position: relative; top: 0; left: 0; float: left;
+	background-color: red; }	
+
 
 .tables li:nth-child(1) { 
 	background-image: url(images/TOC-01.jpg); }
@@ -203,3 +205,15 @@ p { /*clear: both;*/
 .right.fadein { opacity: 1; }
 #homepage.fadeout { opacity: 0; z-index: 1; }
 #TOC.fadein { opacity: 1; }
+
+
+
+
+/* Those are our standard questions. 
+My dad responds: yes well slavery was a standard at one time, but that didn't make it a good thing.;
+--- that poor fucking employee. This just went above her pay grade. 
+
+The challenge question is what city were you born in. The city I was born in goes by at least four different names.
+Can I get a more reasonable question?
+ohhhh dad.
+only you can think what city were you born in is unreasonable. */
