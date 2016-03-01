@@ -23,11 +23,10 @@ $(".TOCtoggle").on("click",function(e) {
 });
 
 
-$(".TOCbtn").hover(
+/*$(".TOCbtn").hover(
 	function() {
-		$(".rediv").addClass("on");
 		$(".TOCbtn").addClass("zoomin");
-	});
+	});*/
 
 
 $("#dacat").hover(

@@ -80,7 +80,7 @@ body { overflow: hidden; }
 #homepage { overflow: hidden; left: 0; top: 0; position: absolute;
 	z-index: 99; opacity: 1;
 	height: 100vh; width: 100vw; 
-	-webkit-transition: all 3s ease-in;
+	-webkit-transition: opacity 3s ease-in, z-index 3s ease-in;
 	-webkit-transition-delay: .5s; }
 
 .background { position: absolute; top: 0; left: 0; z-index: -3; }
@@ -97,11 +97,11 @@ body { overflow: hidden; }
 
 
 
-h1 { width: 35%; padding-right: 5%; padding-left: 10%;
+.welcometitle { width: 35%; padding-right: 5%; padding-left: 10%;
 	color: white;
 	font-family: Playfair Display; font-weight: 700; font-size: 55px;
 	position: relative; top: -10vh; left: 0; z-index: 3; float: left;
-	text-shadow: 0px 0px 15px black; opacity: 0;
+	text-shadow: 0px 0px 15px black; opacity: 0; 
 	-webkit-transition: all 4s ease-out;
 	-webkit-transition-delay: 1.5s; }
 
@@ -109,7 +109,7 @@ h1 { width: 35%; padding-right: 5%; padding-left: 10%;
 
 .hand { width: 40%; position: absolute; float: left;
 	z-index: 1; left: 20px; bottom: -70vh; 
-	-webkit-transition: all 4s ease-out;
+	-webkit-transition: bottom 4s ease-out;
 	-webkit-transition-delay: .75s; }
 
 
@@ -117,7 +117,7 @@ h1 { width: 35%; padding-right: 5%; padding-left: 10%;
 	float: right; position: relative; right: 0;
 	top: 50%; transform: translateY(-50%);
 	opacity: 0;
-	-webkit-transition: all 4s ease-out;
+	-webkit-transition: opacity 4s ease-out;
 	-webkit-transition-delay: 6s; }
 
 p { /*clear: both;*/
@@ -130,8 +130,7 @@ p { /*clear: both;*/
 	font-size: 25px; background: none; border: 3px solid white; 
 	padding: 5px; padding-left: 30px; padding-right: 30px; 
 	text-shadow: 0px 0px 15px black;
-	position: relative; left: 50%; transform: translateX(-50%);
-	-webkit-transition: all 5s ease-out;  }
+	position: relative; left: 50%; transform: translateX(-50%); }
 
 
 .TOCtoggle:hover { color: #602020; border-color: #602020;
@@ -154,17 +153,21 @@ p { /*clear: both;*/
 
 #TOC { width: 100vw; height: 100vh; z-index: 1;
 	opacity: 0;
-	-webkit-transition: all 4.5s ease-out;
+	-webkit-transition: opacity 4.5s ease-out;
 	-webkit-transition-delay: 2.5s; }
 
-.tables li { width: 20vw; height: 50vh; float: left;
+.tables li { width: 20vw; height: 50vh; float: left; z-index: 5;
 	background-size: cover; background-color: orange;
-	background-position: 50% 50%; }
+	background-position: 50% 50%; overflow: hidden; position: relative; }
 
-.rediv { width: 90%; height: 100%;
-	z-index: 99; position: relative; top: 0; left: 0; float: left;
-	background-color: red; display: none; }	
+.tables li:hover { z-index: 4; -webkit-animation: photozoomin 2.5s ease-out 1;
+	-webkit-animation-fill-mode: forwards; }
+@-webkit-keyframes photozoomin { 
+	0% { -webkit-transform: scale(1, 1); }
+	100% { -webkit-transform: scale(1.1, 1.1); } }
 
+.rediv:hover { opacity: .25;
+	-webkit-transition: opacity 1.5s ease-out; }
 
 .tables li:nth-child(1) { 
 	background-image: url(images/TOC-01.jpg); }
@@ -188,10 +191,15 @@ p { /*clear: both;*/
 	background-image: url(images/TOC-10.jpg); }
 
 
-.tables .number { position: relative; height: 55%;
-	top: 25%; transform: translateY(-13%);
-	left: 50%; transform: translateX(-50%); }
+.tables .number { position: relative; height: 45%;
+	top: 0; /*transform: translateY(-13%);*/
+	left: 50%; transform: translateX(-50%); 
+	background-color: rgba(102, 0, 0,0);
+	padding: 45%;
+	-webkit-transition: background-color 1.5s ease-out; }
 
+.tables .number:hover { background-color: rgba(102,0,0,.25);
+	-webkit-transition: background-color 1.5s ease-out; }
 
 
 
@@ -203,7 +211,7 @@ p { /*clear: both;*/
 .hand.riseup { bottom: -10vh; }
 .welcometitle.riseup { top: 30vh; opacity: 1; }
 .right.fadein { opacity: 1; }
-#homepage.fadeout { opacity: 0; z-index: 1; }
+#homepage.fadeout { opacity: 0; z-index: -99; }
 #TOC.fadein { opacity: 1; }
 
 

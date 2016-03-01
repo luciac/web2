@@ -26,6 +26,7 @@ $(".TOCtoggle").on("click",function(e) {
 
 
 
+
 $("#dacat").hover(
 	function() {
 		$("#birthday").addClass("fade-in");
