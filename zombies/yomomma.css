@@ -87,12 +87,12 @@ body { overflow: hidden; }
 .photo { background-size: cover; background-position: 50% 50%; }
 .text { background-color: white; }
 
-.shop { font-family: Playfair Display; font-weight: 700; color: #602020;
+.shop { font-family: Playfair Display SC; font-weight: 700; color: #602020;
 	font-size: 18px; background: lightgrey; border: 3px solid #602020; 
 	padding: 5px; padding-left: 30px; padding-right: 30px; 
-	text-transform: uppercase;
-	left: 50%; transform: translateX(-50%);
-	position: relative; }
+	text-transform: lowercase; position: relative;
+	left: 50%; transform: translateX(-50%); }
+
 
 
 .TOCtoggle:hover { color: #602020; border-color: #602020;
@@ -100,14 +100,22 @@ body { overflow: hidden; }
 	-webkit-transition: all 2s ease-out; }
 
 .wordparts { width: 66vw; height: 85vh; float: right; }
-h1 { font-family: Playfair Display; text-transform: uppercase;
+h1 { font-family: Playfair Display SC; /*text-transform: uppercase;*/
 	text-shadow: -5px 5px 8px lightgrey;
 	font-size: 60px; padding: 50px; color: #602020; }
-p { font-family: Belleza; font-size: 17px;
-	line-height: 1.25em; text-shadow: -15px 15px 10px lightgrey;
-	width: 60%; padding-left: 50px }
+.dropdown { position: relative; top: 5px; }
+
+p { font-family: Raleway; font-size: 13.25px; color: #595959;
+	line-height: 1.4em; text-shadow: -15px 15px 10px #d9d9d9;
+	padding: 50px; float: right; }
 
 .shopit { display: none; }
+.options h2 { font-family: Playfair Display SC; font-size: 25px;
+	text-transform: lowercase; color: #602020; 
+	padding-left: 50px; padding-bottom: 15px; padding-top: 0; }
+.options p { font-size: 12px; line-height: 1.5;
+	padding-top: 0px; padding-bottom: 10px; }
+.options { padding-top: 0; }
 
 
 
@@ -118,15 +126,15 @@ p { font-family: Belleza; font-size: 17px;
 -------------------------------PAGE ONE--------------------------------
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
-/*#first { display: none; }*/
+#first { display: none; }
 
-#first .photo { width: 55vw; height: 85vh; float: left;
+#first .photo { width: 60vw; height: 85vh; float: left;
 	background-image: url(images/jacket.png); }
-#first .text { width: 45vw; height: 85vh; float: right; }
+#first .text { width: 40vw; height: 85vh; float: right; }
 
 #first h1 { position: relative; top: 15%; }
-#first p { position: relative; top: 12%; left: 5%; }
-#first button { margin: 0; top: 30vh; }
+#first p { position: absolute; top: 30%; right: 5%; width: 280px; }
+#first button { margin: 0; top: 50vh; }
 
 
 
@@ -142,9 +150,10 @@ p { font-family: Belleza; font-size: 17px;
 	background-image: url(images/boots.png); }
 #second .text { width: 50vw; height: 85vh; float: left; }
 
-#second h1 { position: relative; top: 15%; }
-#second p { position: relative; top: 12%; left: 5%; }
-#second button { margin: 0; top: 30vh; }
+#second h1 { position: relative; top: 15%; text-transform: capitalize; }
+#second p { position: relative; top: 30px; left: 5%; width: 35vw; float: left;
+	padding: 5vw; }
+#second button { margin: 0; bottom: 10px; }
 
 
 
@@ -156,13 +165,167 @@ p { font-family: Belleza; font-size: 17px;
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
 #third { display: none; }
-#third .photo { width: 100vw; height: 50vh; float: right;
-	background-image: url(images/crossbow.png); }
-#third .text { width: 100vw; height: 50vh; float: left; left: 4px; top: 20px; }
+#third .photo { width: 100vw; height: 85vh; float: right;
+	background-image: url(images/crossbow.png); background-size: cover;
+	position: absolute; top: 0; left: 0; }
+#third .text { width: 100vw; height: 50vh;
+	position: absolute; left: 4px; top: 20px; background-color: transparent;
+	z-index: 20; }
 
-#third h1 { position: relative; top: -5% }
-#third p { position: relative; left: 5%; }
-#third button { margin: 0; top: 0vh; right: 30%; }
+#third h1 { position: relative; top: -5%;
+	color: white; text-shadow: none; }
+#third p { position: relative; left: 5%; float: left;
+	color: white; text-shadow: none;
+	width: 27vw; }
+#third button { margin: 0; right: 30%;
+	position: fixed; bottom: 20vh;
+	background-color: black; }
+
+#gradienta { position: fixed; top: 0; left: 0; 
+	height: 100vh; width: 75vw; z-index: 10;
+	background: -webkit-linear-gradient(left, rgba(0,0,0,.8), rgba(0,0,0,0)); }
+
+
+
+
+
+
+/*---------------------------------------------------------------------
+-----------------------------------------------------------------------
+------------------------------PAGE FOUR--------------------------------
+-----------------------------------------------------------------------
+---------------------------------------------------------------------*/
+#fourth { display: none; }
+#fourth .photo { width: 100vw; height: 40vh; float: right;
+	background-image: url(images/machete.png); }
+#fourth .text { width: 100vw; height: 45vh; float: left; left: 4px; top: -20px; padding-top: 5px; }
+
+#fourth h1 { position: relative; top: -5%; 
+	padding-bottom: 0; padding-top: 30px; }
+#fourth p { position: relative; left: 5%; padding-top: 10px;
+	width: 80vw; float: left; }
+#fourth button { margin: 0; position: fixed; bottom: 20vh; }
+
+
+
+
+
+/*---------------------------------------------------------------------
+-----------------------------------------------------------------------
+------------------------------PAGE FIVE--------------------------------
+-----------------------------------------------------------------------
+---------------------------------------------------------------------*/
+#fifth { display: none; }
+#fifth .photo { width: 70vw; height: 85vh; float: left;
+	background-image: url(images/bike.png); }
+#fifth .text { width: 30vw; height: 100vh; float: left; left: 4px; top: 20px; }
+
+#fifth h1 { position: relative; top: -5%; padding-bottom: 20px; }
+#fifth p { position: relative; left: 0; padding-top: 0;
+	clear: both;
+	width: 70%; }
+#fifth button { margin: 0; right: 30%;
+	position: relative; bottom: -40px;  }
+
+
+
+
+
+/*---------------------------------------------------------------------
+-----------------------------------------------------------------------
+-------------------------------PAGE SIX--------------------------------
+-----------------------------------------------------------------------
+---------------------------------------------------------------------*/
+#sixth { display: none; }
+#sixth .photo { width: 50vw; height: 100vh; float: left;
+	background-image: url(images/tent.png); }
+#sixth .text { width: 50vw; height: 100vh; float: right; }
+
+#sixth h1 { position: relative; top: 5%; }
+#sixth p { position: relative; left: 5%; float: left;
+	width: 35vw; }
+#sixth button { margin: 0; top: 0vh; right: 30%; }
+
+
+
+
+
+/*---------------------------------------------------------------------
+-----------------------------------------------------------------------
+------------------------------PAGE SEVEN-------------------------------
+-----------------------------------------------------------------------
+---------------------------------------------------------------------*/
+#seventh { display: none; }
+#seventh .photo { width: 60vw; height: 85vh; float: right;
+	background-image: url(images/gauze.png); }
+#seventh .text { width: 40vw; height: 85vh; float: left; left: 4px; top: 20px; }
+
+#seventh h1 { position: relative; top: 5%; }
+#seventh p { position: relative; left: 5%; width: 70%; float: left; }
+#seventh button { margin: 0; top: 0vh; right: 30%; }
+
+
+
+
+
+
+/*---------------------------------------------------------------------
+-----------------------------------------------------------------------
+------------------------------PAGE EIGHT-------------------------------
+-----------------------------------------------------------------------
+---------------------------------------------------------------------*/
+#eigth { display: none; }
+#eigth .photo { width: 60vw; height: 85vh; float: right;
+	background-image: url(images/lifestraw.png); }
+#eigth .text { width: 40vw; height: 85vh; float: left; left: 4px; top: 20px; }
+
+#eigth h1 { position: relative; top: 5%; }
+#eigth p { position: relative; left: 5%; width: 70%; float: left; }
+#eigth button { margin: 0; top: 0vh; right: 30%; }
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------
+-----------------------------------------------------------------------
+------------------------------PAGE NINE--------------------------------
+-----------------------------------------------------------------------
+---------------------------------------------------------------------*/
+#ninth { display: none; }
+#ninth .photo { width: 60vw; height: 85vh; float: left;
+	background-image: url(images/beef-jerky.png); }
+#ninth .text { width: 40vw; height: 85vh; float: right; left: 4px; top: 20px; }
+
+#ninth h1 { position: relative; top: 5%; }
+#ninth p { position: relative; left: 5%; width: 70%; float: left; }
+#ninth button { margin: 0; top: 0vh; right: 30%; }
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------
+-----------------------------------------------------------------------
+-------------------------------PAGE TEN--------------------------------
+-----------------------------------------------------------------------
+---------------------------------------------------------------------*/
+/*#tenth { display: none; }*/
+#tenth .photo { width: 60vw; height: 85vh; float: right;
+	background-image: url(images/solar.png); }
+#tenth .text { width: 40vw; height: 85vh; float: left; left: 4px; top: 20px; }
+
+#tenth h1 { position: relative; top: 5%; }
+#sevtenthenth p { position: relative; left: 5%; width: 70%; float: left; }
+#tenth button { margin: 0; top: 0vh; right: 30%; }
+
+
 
 
 
