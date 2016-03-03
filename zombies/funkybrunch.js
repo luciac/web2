@@ -82,6 +82,79 @@ $(".duck").on("click",function(e) {
 
 
 
+
+
+
+
+
+
+
+//==============================================FOOD OPTIONS=====
+
+$(".beef").on("click",function(e) {
+	$(".beef p").toggleClass("open");
+	$(".beef p").toggleClass("closed");
+	$(".beef h3").toggleClass("open");
+	$(".beef h3").toggleClass("closed");
+	$(".fruit h3").removeClass("open");
+	$(".fruit h3").addClass("closed");
+	$(".fruit p").removeClass("open");
+	$(".fruit p").addClass("closed");
+	$(".granola h3").removeClass("open");
+	$(".granola h3").addClass("closed");
+	$(".granola p").removeClass("open");
+	$(".granola p").addClass("closed");
+	$("#ninth .photo").removeClass("fruit");
+	console.log("your mom wins");
+});
+
+
+$(".fruit").on("click",function(e) {
+	$(".fruit p").toggleClass("open");
+	$(".fruit p").toggleClass("closed");
+	$(".fruit h3").toggleClass("open");
+	$(".fruit h3").toggleClass("closed");
+	$(".beef h3").removeClass("open");
+	$(".beef h3").addClass("closed");
+	$(".beef p").removeClass("open");
+	$(".beef p").addClass("closed");
+	$(".granola h3").removeClass("open");
+	$(".granola h3").addClass("closed");
+	$(".granola p").removeClass("open");
+	$(".granola p").addClass("closed");
+	$("#ninth .photo").addClass("fruit");
+	console.log("your mom wins");
+});
+
+
+$(".granola").on("click",function(e) {
+	$(".granola p").toggleClass("open");
+	$(".granola p").toggleClass("closed");
+	$(".granola h3").toggleClass("open");
+	$(".granola h3").toggleClass("closed");
+	$(".beef h3").removeClass("open");
+	$(".beef h3").addClass("closed");
+	$(".beef p").removeClass("open");
+	$(".beef p").addClass("closed");
+	$(".fruit h3").removeClass("open");
+	$(".fruit h3").addClass("closed");
+	$(".fruit p").removeClass("open");
+	$(".fruit p").addClass("closed");
+	console.log("your mom wins");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(".uno").on("click",function(e) {
 	$("#first").removeClass("closed");
 	$("#second").addClass("closed");

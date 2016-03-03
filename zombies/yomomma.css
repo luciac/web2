@@ -314,6 +314,7 @@ h3.closed { font-weight: 500; padding-left: 50px; }
 #ninth .text { width: 40vw; height: 85vh; float: right; left: 4px; top: 20px; }
 
 #ninth button { margin: 0; top: 0vh; right: 30%; }
+#ninth .photo.fruit { background-image: url(images/dried-fruit.png); }
 
 
 
