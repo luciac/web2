@@ -69,7 +69,7 @@ body { overflow: hidden; }
 
 .clear { width: 100vw; height: 85vh;
 	position: absolute;top: 0; left: 0; 
-	z-index: 1; }
+	z-index: -1; }
 
 #bloodbasket { width: 100vw; height: 85vh;
 	position: absolute; top: 0; left: 0; z-index: -1;
@@ -99,24 +99,48 @@ body { overflow: hidden; }
 	background-color: rgba(0,0,0,.65);
 	-webkit-transition: all 2s ease-out; }
 
-.wordparts { width: 66vw; height: 85vh; float: right; }
-h1 { font-family: Playfair Display SC; /*text-transform: uppercase;*/
+h1 { display: inline-block; width: 80%;
+	border-bottom: solid 1px #602020;
+	font-family: Playfair Display SC; font-size: 60px; color: #602020; /*text-transform: uppercase;*/
 	text-shadow: -5px 5px 8px lightgrey;
-	font-size: 60px; padding: 50px; color: #602020; }
+	padding-top: 100px; padding-left: 50px; padding-bottom: 30px; }
 .dropdown { position: relative; top: 5px; }
 
-p { font-family: Raleway; font-size: 13.25px; color: #595959;
-	line-height: 1.4em; text-shadow: -15px 15px 10px #d9d9d9;
-	padding: 50px; float: right; }
+p { display: inline-block; width: 60%;
+	padding-left: 50px; padding-right: 50px; padding-top: 30px; padding-bottom: 20px;
+	font-family: Raleway; font-size: 13.25px; color: #595959;
+	line-height: 1.4em; text-shadow: -15px 15px 10px #d9d9d9; }
 
 .shopit { display: none; }
-.options h2 { font-family: Playfair Display SC; font-size: 25px;
-	text-transform: lowercase; color: #602020; 
-	padding-left: 50px; padding-bottom: 15px; padding-top: 0; }
-.options p { font-size: 12px; line-height: 1.5;
-	padding-top: 0px; padding-bottom: 10px; }
-.options { padding-top: 0; }
+.text h2 { display: inline-block;
+	padding-left: 50px; padding-right: 50px; padding-top: 20px;
+	font-family: Playfair Display SC; font-size: 20px;
+	text-transform: lowercase; color: #602020; }
+.options h3 { display: inline-block; 
+	padding-left: 50px; padding-right: 2px; padding-top: 15px; padding-bottom: 5px;
+	border-bottom: solid 2px grey;
+	font-family: Raleway; font-size: 14px;
+	text-transform: uppercase; color: #595959; }
 
+.options p { display: block;
+	font-size: 11px; line-height: 1.5; font-weight: 500;
+	color: #595959;
+	padding-top: 15px; padding-bottom: 5px;
+	width: 250px;
+	text-shadow: none; }
+
+
+
+
+
+/*============================================JS TRIGGERED THINGS====*/
+/*p.open { display: inline-block; }*/
+p.closed { display: none; }
+p.open { display: block; }
+.options { padding-top: 0; }
+h3.open { font-weight: 700; padding-left: 150px;
+	position: relative; left: -100px; }
+h3.closed { font-weight: 500; padding-left: 50px; }
 
 
 
@@ -126,15 +150,20 @@ p { font-family: Raleway; font-size: 13.25px; color: #595959;
 -------------------------------PAGE ONE--------------------------------
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
-#first { display: none; }
+#first.closed { display: none; }
 
 #first .photo { width: 60vw; height: 85vh; float: left;
 	background-image: url(images/jacket.png); }
 #first .text { width: 40vw; height: 85vh; float: right; }
 
 #first h1 { position: relative; top: 15%; }
-#first p { position: absolute; top: 30%; right: 5%; width: 280px; }
+/*#first p { position: absolute; top: 30%; right: 5%; width: 280px; }*/
 #first button { margin: 0; top: 50vh; }
+
+
+/*----------------------------------------------JAVASCRIPT TRIGGERED--------*/
+#firt .photo.leather { background-image: url(images/jacket.png); }
+#first .photo.canvas { background-image: url(images/canvas.png); }
 
 
 
@@ -145,14 +174,11 @@ p { font-family: Raleway; font-size: 13.25px; color: #595959;
 -------------------------------PAGE TWO--------------------------------
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
-#second { display: none; }
+#second.closed { display: none; }
 #second .photo { width: 50vw; height: 85vh; float: right;
 	background-image: url(images/boots.png); }
 #second .text { width: 50vw; height: 85vh; float: left; }
 
-#second h1 { position: relative; top: 15%; text-transform: capitalize; }
-#second p { position: relative; top: 30px; left: 5%; width: 35vw; float: left;
-	padding: 5vw; }
 #second button { margin: 0; bottom: 10px; }
 
 
@@ -164,7 +190,7 @@ p { font-family: Raleway; font-size: 13.25px; color: #595959;
 ------------------------------PAGE THREE-------------------------------
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
-#third { display: none; }
+#third.closed { display: none; }
 #third .photo { width: 100vw; height: 85vh; float: right;
 	background-image: url(images/crossbow.png); background-size: cover;
 	position: absolute; top: 0; left: 0; }
@@ -195,15 +221,13 @@ p { font-family: Raleway; font-size: 13.25px; color: #595959;
 ------------------------------PAGE FOUR--------------------------------
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
-#fourth { display: none; }
+#fourth.closed { display: none; }
 #fourth .photo { width: 100vw; height: 40vh; float: right;
 	background-image: url(images/machete.png); }
-#fourth .text { width: 100vw; height: 45vh; float: left; left: 4px; top: -20px; padding-top: 5px; }
+#fourth .text { width: 100vw; height: 45vh; float: left; left: 4px; top: -20px; }
 
-#fourth h1 { position: relative; top: -5%; 
-	padding-bottom: 0; padding-top: 30px; }
-#fourth p { position: relative; left: 5%; padding-top: 10px;
-	width: 80vw; float: left; }
+#fourth h1 { position: relative; padding-bottom: 15px; padding-top: 25px; }
+#fourth p { position: relative; padding-top: 20px; width: 80vw; }
 #fourth button { margin: 0; position: fixed; bottom: 20vh; }
 
 
@@ -215,15 +239,12 @@ p { font-family: Raleway; font-size: 13.25px; color: #595959;
 ------------------------------PAGE FIVE--------------------------------
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
-#fifth { display: none; }
+#fifth.closed { display: none; }
 #fifth .photo { width: 70vw; height: 85vh; float: left;
 	background-image: url(images/bike.png); }
 #fifth .text { width: 30vw; height: 100vh; float: left; left: 4px; top: 20px; }
 
 #fifth h1 { position: relative; top: -5%; padding-bottom: 20px; }
-#fifth p { position: relative; left: 0; padding-top: 0;
-	clear: both;
-	width: 70%; }
 #fifth button { margin: 0; right: 30%;
 	position: relative; bottom: -40px;  }
 
@@ -236,14 +257,10 @@ p { font-family: Raleway; font-size: 13.25px; color: #595959;
 -------------------------------PAGE SIX--------------------------------
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
-#sixth { display: none; }
+#sixth.closed { display: none; }
 #sixth .photo { width: 50vw; height: 100vh; float: left;
 	background-image: url(images/tent.png); }
 #sixth .text { width: 50vw; height: 100vh; float: right; }
-
-#sixth h1 { position: relative; top: 5%; }
-#sixth p { position: relative; left: 5%; float: left;
-	width: 35vw; }
 #sixth button { margin: 0; top: 0vh; right: 30%; }
 
 
@@ -255,14 +272,12 @@ p { font-family: Raleway; font-size: 13.25px; color: #595959;
 ------------------------------PAGE SEVEN-------------------------------
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
-#seventh { display: none; }
+#seventh.closed { display: none; }
 #seventh .photo { width: 60vw; height: 85vh; float: right;
 	background-image: url(images/gauze.png); }
 #seventh .text { width: 40vw; height: 85vh; float: left; left: 4px; top: 20px; }
 
-#seventh h1 { position: relative; top: 5%; }
-#seventh p { position: relative; left: 5%; width: 70%; float: left; }
-#seventh button { margin: 0; top: 0vh; right: 30%; }
+#seventh button { margin: 0; top: 0vh; right: 30%; display: none; }
 
 
 
@@ -274,14 +289,12 @@ p { font-family: Raleway; font-size: 13.25px; color: #595959;
 ------------------------------PAGE EIGHT-------------------------------
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
-#eigth { display: none; }
+#eigth.closed { display: none; }
 #eigth .photo { width: 60vw; height: 85vh; float: right;
 	background-image: url(images/lifestraw.png); }
 #eigth .text { width: 40vw; height: 85vh; float: left; left: 4px; top: 20px; }
 
-#eigth h1 { position: relative; top: 5%; }
-#eigth p { position: relative; left: 5%; width: 70%; float: left; }
-#eigth button { margin: 0; top: 0vh; right: 30%; }
+#eigth button { margin: 0; top: 0vh; right: 30%; display: none; }
 
 
 
@@ -295,13 +308,11 @@ p { font-family: Raleway; font-size: 13.25px; color: #595959;
 ------------------------------PAGE NINE--------------------------------
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
-#ninth { display: none; }
+#ninth.closed { display: none; }
 #ninth .photo { width: 60vw; height: 85vh; float: left;
 	background-image: url(images/beef-jerky.png); }
 #ninth .text { width: 40vw; height: 85vh; float: right; left: 4px; top: 20px; }
 
-#ninth h1 { position: relative; top: 5%; }
-#ninth p { position: relative; left: 5%; width: 70%; float: left; }
 #ninth button { margin: 0; top: 0vh; right: 30%; }
 
 
@@ -316,14 +327,12 @@ p { font-family: Raleway; font-size: 13.25px; color: #595959;
 -------------------------------PAGE TEN--------------------------------
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
-/*#tenth { display: none; }*/
+#tenth.closed { display: none; }
 #tenth .photo { width: 60vw; height: 85vh; float: right;
 	background-image: url(images/solar.png); }
 #tenth .text { width: 40vw; height: 85vh; float: left; left: 4px; top: 20px; }
 
-#tenth h1 { position: relative; top: 5%; }
-#sevtenthenth p { position: relative; left: 5%; width: 70%; float: left; }
-#tenth button { margin: 0; top: 0vh; right: 30%; }
+#tenth button { margin: 0; top: 0vh; right: 30%; display: none; }
 
 
 
