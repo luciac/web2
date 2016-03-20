@@ -56,6 +56,24 @@ button { outline: none; }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Add Styles Here */
 
 body { overflow: hidden; }
@@ -63,15 +81,17 @@ body { overflow: hidden; }
 
 
 
-#tenbodys { width: 100vw; height: 85vh;
+
+
+#tenbodys { width: 100vw; height: 90vh;
 	position: absolute; top: 0; left: 0;
 	z-index: 2; }
 
-.clear { width: 100vw; height: 85vh;
+.clear { width: 100vw; height: 90vh;
 	position: absolute;top: 0; left: 0; 
 	z-index: -1; }
 
-#bloodbasket { width: 100vw; height: 85vh;
+#bloodbasket { width: 100vw; height: 90vh;
 	position: absolute; top: 0; left: 0; z-index: -1;
 	background-color: white; }
 #bloodbag { width: 100vw; height: 100%; background-color: white; }
@@ -80,17 +100,18 @@ body { overflow: hidden; }
 
 
 
-#navbar { width: 100vw; height: 15vh;
-	position: absolute; bottom: 0; left: 0;
-	background-color: orange; }
+
 
 .photo { background-size: cover; background-position: 50% 50%; }
 .text { background-color: white; }
 
-.shop { font-family: Playfair Display SC; font-weight: 700; color: #602020;
-	font-size: 18px; background: lightgrey; border: 3px solid #602020; 
+.shop { 
+	font-family: Raleway; text-transform: uppercase;
+	/*font-family: Playfair Display SC; font-weight: 700;*/ color: #602020;
+	font-size: 14px; border: 1px solid #602020; 
+	background-color: transparent;
 	padding: 5px; padding-left: 30px; padding-right: 30px; 
-	text-transform: lowercase; position: relative;
+	/*text-transform: lowercase;*/ position: relative;
 	left: 50%; transform: translateX(-50%); }
 
 
@@ -101,21 +122,23 @@ body { overflow: hidden; }
 
 h1 { display: inline-block; width: 80%;
 	border-bottom: solid 1px #602020;
-	font-family: Playfair Display SC; font-size: 60px; color: #602020; /*text-transform: uppercase;*/
-	text-shadow: -5px 5px 8px lightgrey;
-	padding-top: 100px; padding-left: 50px; padding-bottom: 30px; }
-.dropdown { position: relative; top: 5px; }
+	font-family: Otama-ep; text-transform: uppercase;
+	/*font-family: Playfair Display SC;*/ 
+	font-size: 34px; color: #602020;
+	padding-top: 100px; padding-left: 50px; padding-bottom: 15px; }
+/*.dropdown { position: relative; top: 5px; }*/
 
 p { display: inline-block; width: 60%;
-	padding-left: 50px; padding-right: 50px; padding-top: 30px; padding-bottom: 20px;
-	font-family: Raleway; font-size: 13.25px; color: #595959;
-	line-height: 1.4em; text-shadow: -15px 15px 10px #d9d9d9; }
+	padding-left: 50px; padding-right: 50px; padding-top: 25px; padding-bottom: 30px;
+	font-family: Raleway; font-size: 12px; color: #595959;
+	line-height: 1.75em; text-shadow: -15px 15px 10px #d9d9d9; }
 
 .shopit { display: none; }
 .text h2 { display: inline-block;
 	padding-left: 50px; padding-right: 50px; padding-top: 20px;
-	font-family: Playfair Display SC; font-size: 20px;
-	text-transform: lowercase; color: #602020; }
+	font-family: Otama-ep; text-transform: uppercase;
+	/*font-family: Playfair Display SC;*/ font-size: 18px;
+	/*text-transform: lowercase;*/ color: #602020; }
 .options h3 { display: inline-block; 
 	padding-left: 50px; padding-right: 2px; padding-top: 15px; padding-bottom: 5px;
 	border-bottom: solid 2px grey;
@@ -123,7 +146,7 @@ p { display: inline-block; width: 60%;
 	text-transform: uppercase; color: #595959; }
 
 .options p { display: block;
-	font-size: 11px; line-height: 1.5; font-weight: 500;
+	font-size: 10px; line-height: 1.6; font-weight: 500;
 	color: #595959;
 	padding-top: 15px; padding-bottom: 5px;
 	width: 250px;
@@ -135,12 +158,61 @@ p { display: inline-block; width: 60%;
 
 /*============================================JS TRIGGERED THINGS====*/
 /*p.open { display: inline-block; }*/
-p.closed { display: none; }
-p.open { display: block; }
+/*p.closed { display: none; }
+p.open { display: block; }*/
+
+p.closed { overflow: hidden; /*
+	max-height: 1px; -webkit-transition: max-height 2s ease-in 0s; 
+	padding-top: 0px; -webkit-transition: padding-top 1s ease-in 2s;
+	padding-bottom: 0px; -webkit-transition: padding-bottom 1s ease-in 2s;*/
+	max-height: 1px; padding-bottom: 0; padding-top: 0;
+	transition-property: max-height, padding-bottom, padding-top;
+	transition-duration: 1s, 1s, 1s;
+	transition-delay: 0s, 0s, 0s;
+	transition-timing-function: cubic-bezier(0.15, 0.29, 1, 1); }
+
+p.open { overflow: hidden;
+	max-height: 400px; padding-bottom: 5px; padding-top: 15px;
+	transition-property: max-height, padding-bottom, padding-top;
+	transition-duration: 5s, 1s, 1s;
+	transition-delay: 0s, 0s, 0s;
+	transition-timing-function: cubic-bezier(0.15, 0.29, 1, 1); }
+
+
+
+
+
+
+
+
+
+
 .options { padding-top: 0; }
 h3.open { font-weight: 700; padding-left: 150px;
-	position: relative; left: -100px; }
-h3.closed { font-weight: 500; padding-left: 50px; }
+	position: relative; left: -100px;
+	-webkit-transition: all 1s ease-out; }
+
+
+h3.closed { font-weight: 500; padding-left: 50px;
+	position: relative; left: 0;
+	-webkit-transition: all 1s ease-out; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -152,9 +224,9 @@ h3.closed { font-weight: 500; padding-left: 50px; }
 ---------------------------------------------------------------------*/
 #first.closed { display: none; }
 
-#first .photo { width: 60vw; height: 85vh; float: left;
+#first .photo { width: 60vw; height: 90vh; float: left;
 	background-image: url(images/jacket.png); }
-#first .text { width: 40vw; height: 85vh; float: right; }
+#first .text { width: 40vw; height: 90vh; float: right; }
 
 #first h1 { position: relative; top: 15%; }
 /*#first p { position: absolute; top: 30%; right: 5%; width: 280px; }*/
@@ -164,7 +236,7 @@ h3.closed { font-weight: 500; padding-left: 50px; }
 /*----------------------------------------------JAVASCRIPT TRIGGERED--------*/
 #firt .photo.leather { background-image: url(images/jacket.png); }
 #first .photo.canvas { background-image: url(images/canvas.png); }
-
+#first .photo.duck { background-image: url(images/duck.png); }
 
 
 
@@ -175,9 +247,9 @@ h3.closed { font-weight: 500; padding-left: 50px; }
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
 #second.closed { display: none; }
-#second .photo { width: 50vw; height: 85vh; float: right;
+#second .photo { width: 50vw; height: 90vh; float: right;
 	background-image: url(images/boots.png); }
-#second .text { width: 50vw; height: 85vh; float: left; }
+#second .text { width: 50vw; height: 90vh; float: left; }
 
 #second button { margin: 0; bottom: 10px; }
 
@@ -191,7 +263,7 @@ h3.closed { font-weight: 500; padding-left: 50px; }
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
 #third.closed { display: none; }
-#third .photo { width: 100vw; height: 85vh; float: right;
+#third .photo { width: 100vw; height: 90vh; float: right;
 	background-image: url(images/crossbow.png); background-size: cover;
 	position: absolute; top: 0; left: 0; }
 #third .text { width: 100vw; height: 50vh;
@@ -224,7 +296,7 @@ h3.closed { font-weight: 500; padding-left: 50px; }
 #fourth.closed { display: none; }
 #fourth .photo { width: 100vw; height: 40vh; float: right;
 	background-image: url(images/machete.png); }
-#fourth .text { width: 100vw; height: 45vh; float: left; left: 4px; top: -20px; }
+#fourth .text { width: 100vw; height: 55vh; float: left; left: 4px; top: -20px; }
 
 #fourth h1 { position: relative; padding-bottom: 15px; padding-top: 25px; }
 #fourth p { position: relative; padding-top: 20px; width: 80vw; }
@@ -240,7 +312,7 @@ h3.closed { font-weight: 500; padding-left: 50px; }
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
 #fifth.closed { display: none; }
-#fifth .photo { width: 70vw; height: 85vh; float: left;
+#fifth .photo { width: 70vw; height: 90vh; float: left;
 	background-image: url(images/bike.png); }
 #fifth .text { width: 30vw; height: 100vh; float: left; left: 4px; top: 20px; }
 
@@ -273,9 +345,9 @@ h3.closed { font-weight: 500; padding-left: 50px; }
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
 #seventh.closed { display: none; }
-#seventh .photo { width: 60vw; height: 85vh; float: right;
+#seventh .photo { width: 60vw; height: 90vh; float: right;
 	background-image: url(images/gauze.png); }
-#seventh .text { width: 40vw; height: 85vh; float: left; left: 4px; top: 20px; }
+#seventh .text { width: 40vw; height: 90vh; float: left; left: 4px; top: 20px; }
 
 #seventh button { margin: 0; top: 0vh; right: 30%; display: none; }
 
@@ -290,9 +362,9 @@ h3.closed { font-weight: 500; padding-left: 50px; }
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
 #eigth.closed { display: none; }
-#eigth .photo { width: 60vw; height: 85vh; float: right;
+#eigth .photo { width: 60vw; height: 90vh; float: right;
 	background-image: url(images/lifestraw.png); }
-#eigth .text { width: 40vw; height: 85vh; float: left; left: 4px; top: 20px; }
+#eigth .text { width: 40vw; height: 90vh; float: left; left: 4px; top: 20px; }
 
 #eigth button { margin: 0; top: 0vh; right: 30%; display: none; }
 
@@ -309,12 +381,13 @@ h3.closed { font-weight: 500; padding-left: 50px; }
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
 #ninth.closed { display: none; }
-#ninth .photo { width: 60vw; height: 85vh; float: left;
+#ninth .photo { width: 60vw; height: 90vh; float: left;
 	background-image: url(images/beef-jerky.png); }
-#ninth .text { width: 40vw; height: 85vh; float: right; left: 4px; top: 20px; }
+#ninth .text { width: 40vw; height: 90vh; float: right; left: 4px; top: 20px; }
 
 #ninth button { margin: 0; top: 0vh; right: 30%; }
 #ninth .photo.fruit { background-image: url(images/dried-fruit.png); }
+#ninth .photo.granola { background-image: url(images/granola.png); }
 
 
 
@@ -329,9 +402,9 @@ h3.closed { font-weight: 500; padding-left: 50px; }
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
 #tenth.closed { display: none; }
-#tenth .photo { width: 60vw; height: 85vh; float: right;
+#tenth .photo { width: 60vw; height: 90vh; float: right;
 	background-image: url(images/solar.png); }
-#tenth .text { width: 40vw; height: 85vh; float: left; left: 4px; top: 20px; }
+#tenth .text { width: 40vw; height: 90vh; float: left; left: 4px; top: 20px; }
 
 #tenth button { margin: 0; top: 0vh; right: 30%; display: none; }
 
@@ -346,7 +419,12 @@ h3.closed { font-weight: 500; padding-left: 50px; }
 --------------------------------NAVBAR---------------------------------
 -----------------------------------------------------------------------
 ---------------------------------------------------------------------*/
-#navbar { z-index: 40; }
+#navbar { width: 100vw; height: 10vh;
+	position: absolute; bottom: 0; left: 0;
+	background-color: orange;
+	z-index: 40; }
+
+
 .tables li { width: 10vw; height: 100%; float: left;
 	background-size: cover; background-color: pink;
 	background-position: 50% 50%; overflow: hidden; position: relative; }

@@ -25,6 +25,12 @@ $(".TOCtoggle").on("click",function(e) {
 
 
 
+
+//==============================================JACKET OPTIONS=====
+
+
+
+
 $(".leather").on("click",function(e) {
 	$(".leather p").toggleClass("open");
 	$(".leather p").toggleClass("closed");
@@ -38,7 +44,9 @@ $(".leather").on("click",function(e) {
 	$(".duck h3").addClass("closed");
 	$(".duck p").removeClass("open");
 	$(".duck p").addClass("closed");
-	console.log("your mom wins");
+	$("#first .photo").removeClass("canvas");
+	$("#first .photo").removeClass("duck");
+	console.log("your face wins");
 });
 
 
@@ -56,7 +64,10 @@ $(".canvas").on("click",function(e) {
 	$(".duck h3").addClass("closed");
 	$(".duck p").removeClass("open");
 	$(".duck p").addClass("closed");
-	console.log("your mom wins");
+	$("#first .photo").addClass("canvas");
+	$("#first .photo").removeClass("duck");
+	$("#first .photo").removeClass("jacket");
+	console.log("your face dies");
 });
 
 
@@ -76,7 +87,10 @@ $(".duck").on("click",function(e) {
 	$(".canvas h3").addClass("closed");
 	$(".canvas p").removeClass("open");
 	$(".canvas p").addClass("closed");
-	console.log("your mom wins");
+	$("#first .photo").addClass("duck");
+	$("#first .photo").removeClass("canvas");
+	$("#first .photo").removeClass("jacket");
+	console.log("your face dies");
 });
 
 
@@ -105,6 +119,7 @@ $(".beef").on("click",function(e) {
 	$(".granola p").removeClass("open");
 	$(".granola p").addClass("closed");
 	$("#ninth .photo").removeClass("fruit");
+	$("#ninth .photo").removeClass("granola");
 	console.log("your mom wins");
 });
 
@@ -123,6 +138,7 @@ $(".fruit").on("click",function(e) {
 	$(".granola p").removeClass("open");
 	$(".granola p").addClass("closed");
 	$("#ninth .photo").addClass("fruit");
+	$("#ninth .photo").removeClass("granola");
 	console.log("your mom wins");
 });
 
@@ -140,6 +156,8 @@ $(".granola").on("click",function(e) {
 	$(".fruit h3").addClass("closed");
 	$(".fruit p").removeClass("open");
 	$(".fruit p").addClass("closed");
+	$("#ninth .photo").addClass("granola");
+	$("#ninth .photo").removeClass("fruit");
 	console.log("your mom wins");
 });
 
